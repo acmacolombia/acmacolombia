@@ -12,7 +12,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
 const metadata = {
-  title: 'Startup Landing Page',
+  title: 'ACMA: Asociación Colombiana de Mujeres en Aeroespacial',
 };
 ---
 
@@ -20,27 +20,24 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Startup Web Demo"
+    tagline="ACMA"
     actions={[
       {
         variant: 'primary',
         target: '_blank',
-        text: 'Get templates',
+        text: 'Únete',
         href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
+        icon: 'tabler:rocket',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Conócenos', href: '#features' },
     ]}
   >
     <Fragment slot="title">
-      Improve <span class="hidden sm:inline">the online presence of</span> your <span
-        class="text-accent dark:text-white highlight">Startup</span
-      > with Astrowind templates
+      Asociación Colombiana de Mujeres en Aeroespacial
     </Fragment>
 
     <Fragment slot="subtitle">
-      Step into the spotlight with <span class="font-semibold">Astrowind</span> templates, your pathway to fortifying
-      your startup's digital footprint, fostering credibility, and expanding your reach.
+      ACMA es tu aliado para brillar en el ámbito aeroespacial, cultivando una constelación de apoyo que impulse tu crecimiento. personal y profesional
     </Fragment>
 
     <Fragment slot="image">
@@ -62,8 +59,8 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="About us"
-    subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 4.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
+    title="Acerca de Nosotras"
+    subtitle="Somos una comunidad dedicada a promover la inclusión, el desarrollo profesional y la participación de las mujeres en el sector aeroespacial de Colombia."
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -76,8 +73,8 @@ const metadata = {
     title="Discover the impressive impact of Astrowind"
     subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
     stats={[
-      { title: 'Downloads', amount: '182K' },
-      { title: 'Websites Launched', amount: '87' },
+      { title: 'Lanzada en', amount: '2021' },
+      { title: 'Miembros', amount: '+400' },
       { title: 'User Ratings', amount: '4.8' },
       { title: 'Satisfied Clients', amount: '116K' },
     ]}
@@ -86,8 +83,8 @@ const metadata = {
   <!-- Brands Widget ****************** -->
 
   <Brands
-    title="Partnerships & Collaborations"
-    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    title="Aliados"
+    subtitle="En ACMA, confiamos en el poder de la colaboración para impulsar la innovación y crecer juntos en el sector aeroespacial."
     icons={[]}
     images={[
       {
@@ -133,8 +130,8 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="What services do we provide?"
-    subtitle="We offer a wide range of website templates that suit various industries and purposes such as business, portfolio, e-commerce, blog, etc."
+    title="Qué te ofrecemos?"
+    subtitle="Ofrecemos oportunidades, talleres, conferencias y una constelación de apoyo para fomentar tu carrera en la industria aeroespacial."
     items={[
       {
         title: 'Installation Instructions',
@@ -165,7 +162,7 @@ const metadata = {
 
   <Features
     id="features"
-    title="Main features of our templates"
+    title="Nuestros proyectos"
     subtitle="Possess several key characteristics to effectively cater to the needs of startups and entrepreneurs."
     columns={3}
     items={[
@@ -250,8 +247,8 @@ const metadata = {
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Let us know how we can help"
-    subtitle="We’re here to help and answer any question you might have."
+    title="Cuéntanos cómo podemos ayudarte"
+    subtitle="Estamos aquí para ayudar y responder cualquier pregunta que puedas tener."
     columns={4}
     items={[
       {
@@ -308,11 +305,10 @@ const metadata = {
       icon: 'tabler:download',
     }]}
   >
-    <Fragment slot="title">Be a part of our vision</Fragment>
+    <Fragment slot="title">¿Listas para despegar? </Fragment>
 
     <Fragment slot="subtitle">
-      Discover a dynamic work environment, unparalleled growth opportunities, and the chance to make a meaningful
-      impact.
+      Únete a ACMA y descubre un universo de posibilidades.
     </Fragment>
   </CallToAction>
 </Layout>
