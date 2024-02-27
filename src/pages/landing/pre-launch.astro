@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/LandingLayout.astro';
-
 import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -13,7 +12,7 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="Pre-launch Demo"
+    tagline=""
     title="ACMA - Asociación Colombiana de Mujeres en Aeroespacial"
     subtitle="Espéranos pronto."
     actions={[
@@ -21,7 +20,7 @@ const metadata = {
       // { text: 'Únete', href: 'https://forms.gle/BVzbFWKxKjwiaxJx9' },
     ]}
     image={{
-      src: '/images/ACMA.png', 
+      src: '../assets/images/ACMA.png', 
       alt: 'Logo ACMA - Asociación Colombiana de Mujeres en Aeroespacial',
     }}
   />
