@@ -4,15 +4,8 @@ export const headerData = {
   links: [
     {
       text: 'ACMA',
-      links: [
-        // {
-        //   text: 'SaaS',
-        //   href: getPermalink('/homes/saas'),
-        // },
-        {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
-        },
+      href: getPermalink('/homes/startup'),
+
         // {
         //   text: 'Mobile App',
         //   href: getPermalink('/homes/mobile-app'),
