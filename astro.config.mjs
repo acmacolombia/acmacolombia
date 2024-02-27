@@ -3,20 +3,6 @@ import { fileURLToPath } from 'url';
 
 import { defineConfig, squooshImageService } from 'astro/config';
 
-import { defineConfig } from "astro/config"
-export default defineConfig({
-  i18n: {
-    defaultLocale: "es",
-    locales: ["es", "en"],
-    fallback: {
-      fr: "es"
-    },
-    routing: {
-      prefixDefaultLocale: true,
-  }
-  }
-})
-
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
