@@ -5,7 +5,7 @@ export const headerData = {
     {
       text: 'ACMA',
       href: getPermalink('/homes/startup'),
-
+    }
         // {
         //   text: 'Mobile App',
         //   href: getPermalink('/homes/mobile-app'),
@@ -15,7 +15,7 @@ export const headerData = {
         //   href: getPermalink('/homes/personal'),
         // },
       ],
-    },
+    // },
     {
       text: 'Pages',
       links: [
@@ -49,7 +49,7 @@ export const headerData = {
         },
       ],
     },
-    {
+    // {
       // text: 'Landing',
       // links: [
       //   {
@@ -77,7 +77,7 @@ export const headerData = {
       //     href: getPermalink('/landing/subscription'),
       //   },
       // ],
-    },
+    // },
     {
       text: 'Blog',
       links: [
