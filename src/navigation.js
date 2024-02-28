@@ -14,8 +14,7 @@ export const headerData = {
         //   text: 'Personal',
         //   href: getPermalink('/homes/personal'),
         // },
-      ],
-    },
+    // },
     {
       text: 'Pages',
       links: [
