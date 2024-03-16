@@ -6,7 +6,10 @@ import { defineConfig, squooshImageService } from 'astro/config';
 export default defineConfig({
   i18n: {
     defaultLocale: "en",
-    locales: ["es", "en", "fr"],
+    locales: ["es", "en"],
+    fallback: {
+      en: "es"
+    }
     routing: {
         prefixDefaultLocale: false
     }
