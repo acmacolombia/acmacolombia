@@ -26,7 +26,7 @@ const whenExternalScripts = (items = []) =>
 
 export default defineConfig({
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "es",
     locales: ["es", "en"],
     fallback: {
       en: "es"
