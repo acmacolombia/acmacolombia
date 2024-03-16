@@ -23,12 +23,12 @@ metadata:
         height: 628
     type: website
   twitter:
-    handle: '@acmacolombia'
-    site: '@acmacolombia'
+    handle: '@onwidget'
+    site: '@onwidget'
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: es
   textDirection: ltr
 
 apps:
@@ -63,17 +63,10 @@ apps:
     isRelatedPostsEnabled: true
     relatedPostsCount: 4
 
-<<<<<<< HEAD
   analytics:
     vendors:
       googleAnalytics:
         id: "G-L7JKH2PKL0" 
-=======
-analytics:
-  vendors:
-    googleAnalytics:
-      id: G-L7JKH2PKL0
->>>>>>> parent of e1396be (Update config.yaml file)
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
