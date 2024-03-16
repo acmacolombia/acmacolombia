@@ -23,12 +23,12 @@ metadata:
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: '@acmacolombia'
+    site: '@acmacolombia'
     cardType: summary_large_image
 
 i18n:
-  language: es
+  language: en
   textDirection: ltr
 
 apps:
@@ -63,10 +63,10 @@ apps:
     isRelatedPostsEnabled: true
     relatedPostsCount: 4
 
-  analytics:
-    vendors:
-      googleAnalytics:
-        id: "G-L7JKH2PKL0" 
+analytics:
+  vendors:
+    googleAnalytics:
+      id: G-L7JKH2PKL0
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
