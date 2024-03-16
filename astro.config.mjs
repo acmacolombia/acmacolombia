@@ -38,6 +38,16 @@ const whenExternalScripts = (items = []) =>
     : [];
 
 export default defineConfig({
+  i18n: {
+    defaultLocale: "en",
+    locales: ["es", "en"],
+    fallback: {
+      en: "es"
+    },
+    routing: {
+        prefixDefaultLocale: false
+    }
+  }
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
