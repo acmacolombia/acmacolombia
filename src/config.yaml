@@ -73,37 +73,104 @@ ui:
 
   tokens:
     default:
+      # fonts:
+      #   sans: InterVariable
+      #   serif: var(--ph-font-sans)
+      #   heading: var(--ph-font-sans)
       fonts:
-        sans: InterVariable
-        serif: var(--ph-font-sans)
-        heading: var(--ph-font-sans)
-      colors:
-        default: rgb(16 16 16)
-        heading: rgb(0 0 0)
-        muted: rgb(40 40 40)
-        bgPage: rgb(255 255 255)
-        primary: rgb(0 124 220)
-        secondary: rgb(30 58 138)
-        accent: rgb(109 40 217)
-        info: rgb(119 182 234)
-        success: rgb(54 211 153)
-        warning: rgb(251 189 35)
-        error: rgb(248 114 114)
-        link: var(--ph-color-primary)
-        linkActive: var(--ph-color-link)
-    dark:
-      fonts: {}
-      colors:
-        default: rgb(247, 248, 248)
-        heading: rgb(247, 248, 248)
-        muted: rgb(200, 188, 208)
-        bgPage: rgb(3 6 32)
-        primary: rgb(29 78 216)
-        secondary: rgb(30 58 138)
-        accent: rgb(135 77 2267)
-        info: rgb(58 191 248)
-        success: rgb(54 211 153)
-        warning: rgb(251 189 35)
-        error: rgb(248 114 114)
-        link: var(--ph-color-primary)
-        linkActive: var(--ph-color-link)
+        sans: 'InterVariable, "Yusei Magic", sans-serif'
+        serif: 'Courier New, var(--ph-font-sans), serif'
+        heading: '"Yusei Magic", InterVariable, sans-serif'
+
+        colors:
+          default: rgb(29, 35, 48)  # From #1d2330, for text.
+          heading: rgb(32, 67, 96)  # From #204360, for headings.
+          muted: rgb(236, 232, 235)  # From #ece8eb, for muted text.
+          bgPage: rgb(255, 255, 255)  # White background.
+          primary: rgb(255, 82, 84)  # From #ff5254, for primary buttons, links, and highlights.
+          secondary: rgb(32, 67, 96)  # From #204360, for secondary elements.
+          accent: rgb(236, 232, 235)  # From #ece8eb, now used as an accent color for less prominent elements.
+          info: rgb(119, 182, 234)  # Retained from original, for informational messages.
+          success: rgb(54, 211, 153)  # Retained from original, for success messages.
+          warning: rgb(251, 189, 35)  # Retained from original, for warnings.
+          error: rgb(255, 82, 84)  # From #ff5254, for error messages to catch attention.
+          link: rgb(255, 82, 84)  # From #ff5254, for links to stand out.
+          linkActive: rgb(204, 66, 67)  # Darker shade of #ff5254 for active links.
+
+        dark:
+          colors:
+            default: rgb(236, 232, 235)  # From #ece8eb, for text in dark mode.
+            heading: rgb(236, 232, 235)  # From #ece8eb, for headings in dark mode.
+            muted: rgb(200, 188, 208)  # Adjusted #ece8eb, for muted text in dark mode.
+            bgPage: rgb(29, 35, 48)  # From #1d2330, for background in dark mode.
+            primary: rgb(255, 82, 84)  # From #ff5254, for primary elements in dark mode.
+            secondary: rgb(32, 67, 96)  # From #204360, for secondary elements in dark mode.
+            accent: rgb(236, 232, 235)  # From #ece8eb, for accent elements in dark mode.
+            info: rgb(58, 191, 248)  # Lightened version for info in dark mode.
+            success: rgb(54, 211, 153)  # Retained from original, for success messages in dark mode.
+            warning: rgb(251, 189, 35)  # Retained from original, for warnings in dark mode.
+            error: rgb(255, 82, 84)  # From #ff5254, for errors in dark mode to catch attention.
+            link: rgb(255, 82, 84)  # From #ff5254, for links in dark mode.
+            linkActive: rgb(204, 66, 67)  # Darker shade of #ff5254 for active links in dark mode.
+
+        # colors:
+        #   default: rgb(29, 35, 48)  # From #1d2330
+        #   heading: rgb(32, 67, 96)  # From #204360
+        #   muted: rgb(236, 232, 235)  # From #ece8eb
+        #   bgPage: rgb(255, 255, 255)
+        #   primary: rgb(32, 67, 96)  # From #204360
+        #   secondary: rgb(32, 67, 96)  # Adjusted #204360 for distinction
+        #   accent: rgb(255, 82, 84)  # From #ff5254
+        #   info: rgb(236, 232, 235)  # Lightened #ece8eb for info
+        #   success: rgb(236, 232, 235)  # Adjust #ece8eb for a success variation
+        #   warning: rgb(255, 82, 84)  # Lightened #ff5254 for warning
+        #   error: rgb(255, 82, 84)  # From #ff5254
+        #   link: rgb(32, 67, 96)  # From #204360
+        #   linkActive: rgb(28, 35, 48)  # From #1d2330 for active link
+
+        # dark:
+        #   colors:
+        #     default: rgb(236, 232, 235)  # From #ece8eb
+        #     heading: rgb(236, 232, 235)  # From #ece8eb
+        #     muted: rgb(200, 188, 208)  # Adjusted #ece8eb
+        #     bgPage: rgb(29, 35, 48)  # From #1d2330
+        #     primary: rgb(32, 67, 96)  # From #204360
+        #     secondary: rgb(32, 67, 96)  # Adjusted #204360 for distinction
+        #     accent: rgb(255, 82, 84)  # From #ff5254
+        #     info: rgb(32, 67, 96)  # Lightened #204360 for info
+        #     success: rgb(32, 67, 96)  # Adjust #204360 for a success variation
+        #     warning: rgb(255, 82, 84)  # From #ff5254
+        #     error: rgb(255, 82, 84)  # From #ff5254
+        #     link: rgb(32, 67, 96)  # From #204360
+        #     linkActive: rgb(236, 232, 235)  # From #ece8eb for active link
+
+    #   colors:
+    #     default: rgb(16 16 16)
+    #     heading: rgb(0 0 0)
+    #     muted: rgb(40 40 40)
+    #     bgPage: rgb(255 255 255)
+    #     primary: rgb(0 124 220)
+    #     secondary: rgb(30 58 138)
+    #     accent: rgb(109 40 217)
+    #     info: rgb(119 182 234)
+    #     success: rgb(54 211 153)
+    #     warning: rgb(251 189 35)
+    #     error: rgb(248 114 114)
+    #     link: var(--ph-color-primary)
+    #     linkActive: var(--ph-color-link)
+    # dark:
+    #   fonts: {}
+    #   colors:
+    #     default: rgb(247, 248, 248)
+    #     heading: rgb(247, 248, 248)
+    #     muted: rgb(200, 188, 208)
+    #     bgPage: rgb(3 6 32)
+    #     primary: rgb(29 78 216)
+    #     secondary: rgb(30 58 138)
+    #     accent: rgb(135 77 2267)
+    #     info: rgb(58 191 248)
+    #     success: rgb(54 211 153)
+    #     warning: rgb(251 189 35)
+    #     error: rgb(248 114 114)
+    #     link: var(--ph-color-primary)
+    #     linkActive: var(--ph-color-link)
