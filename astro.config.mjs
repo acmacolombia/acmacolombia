@@ -34,7 +34,7 @@ export default defineConfig({
     routing: {
         prefixDefaultLocale: false
     }
-  }
+  },
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
