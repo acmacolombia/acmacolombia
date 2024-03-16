@@ -1,0 +1,40 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Espéranos pronto',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline=""
+    title="ACMA - Asociación Colombiana de Mujeres en Aeroespacial"
+    subtitle="Espéranos pronto."
+    actions={[
+      { variant: 'primary', text: 'Únete', href: 'https://forms.gle/BVzbFWKxKjwiaxJx9', icon: 'tabler:rocket' },
+      // { text: 'Únete', href: 'https://forms.gle/BVzbFWKxKjwiaxJx9' },
+    ]}
+    image={{
+      src: '~/assets/images/ACMA.png', 
+      alt: 'Logo ACMA - Asociación Colombiana de Mujeres en Aeroespacial',
+    }}
+  />
+
+  <CallToAction
+    title="Estás lista para despegar?"
+    subtitle="3, 2, 1. Prepárate para el lanzamiento de nuestro sitio web."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Únete',
+        href: 'https://forms.gle/BVzbFWKxKjwiaxJx9',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+</Layout>
