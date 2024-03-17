@@ -25,6 +25,46 @@ import '@fontsource-variable/inter';
     --aw-font-serif: var(--aw-font-sans);
     --aw-font-heading: var(--aw-font-sans);
 
+    --aw-color-primary: rgb(255, 82, 84); /* From #ff5254 */
+    --aw-color-secondary: rgb(32, 67, 96); /* From #204360 */
+    --aw-color-accent: rgb(236, 232, 235); /* From #ece8eb */
+
+    --aw-color-text-heading: rgb(29, 35, 48); /* From #1d2330 */
+    --aw-color-text-default: rgb(29, 35, 48); /* From #1d2330, slightly lighter for better readability */
+    --aw-color-text-muted: rgb(29, 35, 48 / 66%); /* From #1d2330 with opacity for muted text */
+    --aw-color-bg-page: rgb(255, 255, 255); /* White background for light mode */
+
+    --aw-color-bg-page-dark: rgb(29, 35, 48); /* From #1d2330 for dark mode background */
+
+    ::selection {background-color: rgb(236, 232, 235);} /* From #ece8eb for selection in light mode */
+  }
+
+  .dark {
+    --aw-font-sans: 'Inter Variable';
+    --aw-font-serif: var(--aw-font-sans);
+    --aw-font-heading: var(--aw-font-sans);
+
+    --aw-color-primary: rgb(255, 82, 84); /* From #ff5254, consistent with light mode */
+    --aw-color-secondary: rgb(32, 67, 96); /* From #204360, consistent with light mode */
+    --aw-color-accent: rgb(236, 232, 235); /* From #ece8eb, for accent in dark mode */
+
+    --aw-color-text-heading: rgb(236, 232, 235); /* From #ece8eb for heading text in dark mode */
+    --aw-color-text-default: rgb(236, 232, 235); /* From #ece8eb, for default text in dark mode */
+    --aw-color-text-muted: rgb(236, 232, 235 / 66%); /* From #ece8eb with opacity for muted text in dark mode */
+    --aw-color-bg-page: rgb(29, 35, 48); /* From #1d2330 for dark mode background */
+
+    ::selection {background-color: rgb(32, 67, 96); color: rgb(255, 255, 255);} /* From #204360 for selection in dark mode, with white text */
+  }
+</style>
+
+<!-- 
+
+<style is:inline is:global>
+  :root {
+    --aw-font-sans: 'Inter Variable';
+    --aw-font-serif: var(--aw-font-sans);
+    --aw-font-heading: var(--aw-font-sans);
+
     --aw-color-primary: rgb(30 64 175);
     --aw-color-secondary: rgb(30 58 138);
     --aw-color-accent: rgb(109 40 217);
@@ -57,4 +97,4 @@ import '@fontsource-variable/inter';
     ::selection {background-color: black; color: snow}
 
   }
-</style>
+</style> -->
