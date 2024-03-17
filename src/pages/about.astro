@@ -8,7 +8,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Sobre nosotras',
+  title: 'Sobre ACMA',
 };
 ---
 
@@ -16,14 +16,14 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Sobre nosotras"
+    tagline=""
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: '',
+      alt: '',
     }}
   >
     <Fragment slot="title">
-      Impulsamos la participación de las mujeres <br />
+      Impulsamos la participación de las Mujeres
       <span class="text-accent dark:text-white highlight">en el sector Aeroespacial</span>
     </Fragment>
 
@@ -40,6 +40,7 @@ const metadata = {
       { title: 'Miembros', amount: '400+' },
       { title: 'Eventos Realizados', amount: '20+' },
       { title: 'Proyectos', amount: '10+' },
+      { title: 'Becas', amount: '20+' },
       // { title: 'Convenios', amount: '1+' },
     ]}
   />
@@ -47,7 +48,7 @@ const metadata = {
   <!-- Features Widget *************** -->
 <Features
 id="features"
-title="Nuestros proyectos"
+title="Nuestros Proyectos"
 subtitle="Descubre cómo estamos impulsando el crecimiento y la participación de las mujeres en el sector aeroespacial. Brindamos oportunidades y espacios de desarrollo para que las mujeres brillen en el sector aeroespacial."
 columns={3}
 items={[
@@ -91,7 +92,7 @@ items={[
 
   <Features2
     title="Nuestro Propelente"
-    tagline="Pilares de nuestra asociación"
+    tagline=""
     columns={4}
     items={[
       {
@@ -115,7 +116,7 @@ items={[
 
   <!-- Features3 Widget ************** -->
 
-  <Features3
+  <!-- <Features3
     columns={3}
     isAfterContent={true}
     items={[
@@ -160,7 +161,7 @@ items={[
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'Colorful Image',
     }}
-  />
+  /> -->
 
   <!-- Steps2 Widget ******************
 
@@ -222,27 +223,28 @@ items={[
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Únete a Nosotras"
-    tagline="Sé parte de nuestra constelación"
+    id="joinus"
+    title="Sé parte de nuestra constelación"
+    tagline=""
     columns={3}
     items={[
       {
         title: 'Como Miembro',
         description:
-          'Únete a nuestra comunidad y accede a todos los recursos, eventos y programas que ofrecemos. Al ser miembro, te beneficiarás de una constelación de apoyo que fomenta el crecimiento personal y profesional en el sector aeroespacial.',
-        icon: 'tabler:user-plus',
+          'Únete y accede a todos los recursos, eventos y programas que ofrecemos. Al ser miembro, te beneficiarás de una constelación de apoyo que fomenta el crecimiento personal y profesional.',
+        icon: 'tabler:user-plus', 
       },
       {
         title: 'Como Voluntario',
         description:
-        "Coolabora en nuestras iniciativas y eventos. Es una excelente manera de contribuir a nuestra misión, mientras ganas experiencia y conocimientos valiosos en el sector.",
-        icon: 'tabler:users',
+        "Coolabora en nuestras iniciativas y eventos. Es una excelente manera de contribuir a nuestra misión, mientras ganas experiencia y conocimientos valiosos en el sector. ¡Únete a nuestro equipo!",
+        icon: 'tabler:user-heart',
       },
       {
         title: 'Como Patrocinador',
         description:
-        "Despega con nosotras. Apoya nuestra asociación y nuestros programas. Juntos, podemos promover la participación y el desarrollo de las mujeres.",
-        icon: 'tabler:users',
+        "Despega con nosotras. Apoya nuestra asociación y nuestros programas. Juntos, podemos promover la participación y empoderamiento de las mujeres en el sector aeroespacial.",
+        icon: 'tabler:user-dollar',
       },
     ]}  
   />

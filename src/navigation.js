@@ -109,7 +109,7 @@ export const headerData = {
     href: getPermalink('/contact'),
   },
   ],
-  actions: [{ text: 'Únete', href: getPermalink('/joinus')}],
+  actions: [{ text: 'Únete', href: getPermalink('/about#joinus') }],
 };
 
 export const footerData = {
@@ -176,7 +176,7 @@ export const footerData = {
         { text: 'Contáctanos',
         href: getPermalink('/contact')},
         { text: 'Únete', 
-        href: getPermalink('/joinus')},
+        href: getPermalink('/about#joinus') },
       ],
     
     },

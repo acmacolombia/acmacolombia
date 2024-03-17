@@ -16,6 +16,9 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
+import { getPermalink } from '~/utils/permalinks';
+
+
 const metadata = {
   title: 'ACMA: Asociación Colombiana de Mujeres en Aeroespacial',
   ignoreTitleTemplate: true,
@@ -30,9 +33,8 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        target: '_blank',
         text: 'Únete',
-        href: 'https://forms.gle/BVzbFWKxKjwiaxJx9',
+        href: getPermalink('/about#joinus'),
         icon: 'tabler:rocket',
       },
     ]}
@@ -57,10 +59,11 @@ const metadata = {
 title="Descubre el universo ACMA"
 subtitle="Somos una comunidad diversa y talentosa dedicada a promover la inclusión, el desarrollo profesional y la participación de las mujeres en el sector aeroespacial."
 stats={[
-  { title: 'Lanzada en', amount: '2021' },
-  { title: 'Miembros', amount: '+400' },
-  { title: 'Proyectos', amount: '+10' },
-  { title: 'Becas', amount: '+20' },
+  // { title: 'Lanzada en', amount: '2021' },
+  { title: 'Miembros', amount: '400+' },
+  { title: 'Eventos Realizados', amount: '20+' },
+  { title: 'Proyectos', amount: '10+' },
+  { title: 'Becas', amount: '20+' },
 ]}
 />
 
@@ -166,9 +169,8 @@ stats={[
   <CallToAction
     actions={[{
       variant: "primary",
-      target: '_blank',
-      text: 'Inscríbete ahora',
-      href: 'https://forms.gle/BVzbFWKxKjwiaxJx9',
+      text: 'Únete ahora',
+      href: getPermalink('/about#joinus'),
       icon: 'tabler:rocket',
     }]}
   >
@@ -179,3 +181,4 @@ stats={[
     </Fragment>
   </CallToAction>
 </Layout>
+
