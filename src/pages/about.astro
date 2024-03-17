@@ -1,4 +1,5 @@
 ---
+import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
@@ -17,13 +18,13 @@ const metadata = {
   <Hero
     tagline="Sobre nosotras"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      // src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      // alt: 'Caos Image',
     }}
   >
     <Fragment slot="title">
-      Impulsando la participación de las mujeres en el <br />
-      <span class="text-accent dark:text-white highlight">sector Aeroespacial</span>
+      Impulsamos la participación de las mujeres <br />
+      <span class="text-accent dark:text-white highlight">en el sector Aeroespacial</span>
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -36,47 +37,60 @@ const metadata = {
   <Stats
     title="Nuestro Impacto"
     stats={[
-      { title: 'Miembros', amount: '500+' },
-      { title: 'Eventos Realizados', amount: '50+' },
-      { title: 'Proyectos', amount: '20+' },
-      { title: 'Convenios', amount: '10+' },
+      { title: 'Miembros', amount: '400+' },
+      { title: 'Eventos Realizados', amount: '20+' },
+      { title: 'Proyectos', amount: '10+' },
+      // { title: 'Convenios', amount: '1+' },
     ]}
   />
 
-  
-  <!-- Features3 Widget ************** -->
+  <!-- Features Widget *************** -->
+<Features
+id="features"
+title="Nuestros proyectos"
+subtitle="Descubre cómo estamos impulsando el crecimiento y la participación de las mujeres en el sector aeroespacial. Brindamos oportunidades y espacios de desarrollo para que las mujeres brillen en el sector aeroespacial."
+columns={3}
+items={[
+  {
+    title: 'Charlas y Conferencias',
+    description:
+      'Brindamos espacios de diálogo y aprendizaje para fomentar el intercambio de conocimientos y experiencias en el sector aeroespacial.',
+    icon: 'tabler:presentation',
+  },
+  {
+    title: 'Mentorías',
+    description: 'Conectamos a mujeres con profesionales del sector aeroespacial para brindar orientación y apoyo.',
+    icon: 'tabler:heart-handshake',
+  },
+  {
+    title: 'Ferias Universitarias',
+    description: 'Participamos en la organización de ferias universitarias para promover el interés de las mujeres en el sector aeroespacial.',
+    icon: 'tabler:stars',
+  },
+  {
+    title: 'Concursos y Hackathons',
+    description: 'Apoyamos equipos diversos en concursos y hackathons aeroespaciales.',
+    icon: 'tabler:trophy',
+  },
+  {
+    title: 'Proyectos de Investigación',
+    description:
+      'Colaboramos en proyectos de investigación en el sector aeroespacial.',
+    icon: 'tabler:device-laptop',
+  },
+  {
+    title: 'Becas',
+    description: 'Ofrecemos becas para fomentar el acceso y el desarrollo profesional en el sector aeroespacial.',
+    icon: 'tabler:award',
+  },
+]}
+/>
 
-  <Features3
-    title="Nuestros Programas"
-    subtitle="Nuestros programas están diseñados para apoyar, educar y empoderar a las mujeres en el sector aeroespacial a través de la capacitación, mentoría y redes de contacto."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'Mentorías',
-        description:
-          'Conectamos a nuestras miembros con líderes y profesionales del sector para fomentar su desarrollo personal y profesional.',
-        icon: 'tabler:user-plus',
-      },
-      {
-        title: 'Educación y Capacitación',
-        description:
-          'Ofrecemos talleres, cursos y seminarios sobre temas técnicos y de desarrollo profesional específicos del sector aeroespacial.',
-        icon: 'tabler:book',
-      },
-      {
-        title: 'Red de Contactos',
-        description:
-          'Organizamos eventos y encuentros para fortalecer la red de contactos entre nuestras miembros y profesionales del sector.',
-        icon: 'tabler:users',
-      },
-    ]}
-  />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Nuestros Valores"
+    title="Nuestro Propelente"
     tagline="Pilares de nuestra asociación"
     columns={4}
     items={[
@@ -99,7 +113,7 @@ const metadata = {
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Features3 Widget **************
 
   <Features3
     columns={3}
@@ -146,9 +160,9 @@ const metadata = {
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'Colorful Image',
     }}
-  />
+  /> -->
 
-  <!-- Steps2 Widget ****************** -->
+  <!-- Steps2 Widget ******************
 
   <Steps2
     title="Achievements"
@@ -177,11 +191,11 @@ const metadata = {
         icon: 'tabler:award',
       },
     ]}
-  />
+  /> -->
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
+  <!-- <Features2
     title="Our locations"
     tagline="Find us"
     columns={4}
@@ -203,28 +217,31 @@ const metadata = {
         description: '3456 Lorem Ipsum St, 34567, São Paulo',
       },
     ]}
-  />
+  /> -->
 
-
-
-  
   <!-- Features2 Widget ************** -->
 
   <Features2
     title="Únete a Nosotras"
-    tagline="Sé parte de la transformación"
-    columns={2}
+    tagline="Sé parte de nuestra constelación"
+    columns={3}
     items={[
       {
         title: 'Como Miembro',
         description:
-          'Únete a nuestra comunidad y accede a todos los recursos, eventos y programas que ofrecemos. Al ser miembro, te beneficiarás de una red de apoyo que fomenta el crecimiento profesional y personal en el sector aeroespacial.',
+          'Únete a nuestra comunidad y accede a todos los recursos, eventos y programas que ofrecemos. Al ser miembro, te beneficiarás de una constelación de apoyo que fomenta el crecimiento personal y profesional en el sector aeroespacial.',
         icon: 'tabler:user-plus',
       },
       {
-        title: 'Voluntariado',
+        title: 'Como Voluntario',
         description:
-        "Participa como voluntaria en nuestras iniciativas y eventos. Es una excelente manera de contribuir a nuestra misión, mientras ganas experiencia y conocimientos valiosos en el sector.",
+        "Coolabora en nuestras iniciativas y eventos. Es una excelente manera de contribuir a nuestra misión, mientras ganas experiencia y conocimientos valiosos en el sector.",
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Como Patrocinador',
+        description:
+        "Despega con nosotras. Apoya nuestra asociación y nuestros programas. Juntos, podemos promover la participación y el desarrollo de las mujeres.",
         icon: 'tabler:users',
       },
     ]}  
