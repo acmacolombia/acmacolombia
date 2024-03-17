@@ -190,6 +190,8 @@ export const footerData = {
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/acmacolombia', target: '_blank' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/acmacolombia', target: '_blank' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/acmacolombia', target: '_blank' },
+    { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/acmacolombia', target: '_blank', },
+    { ariaLabel: 'Youtube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/c/ACMAColombia', target: '_blank' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml'), target: '_blank' },
     // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
