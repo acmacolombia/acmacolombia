@@ -36,7 +36,7 @@ export const headerData = {
       links: [
         {
           text: 'Proyectos',
-          href: getPermalink('/projects'),
+          href: getPermalink('proyectos', 'category'),
         },
         {
           text: 'Eventos',
@@ -156,13 +156,14 @@ export const footerData = {
         { text: 'Noticias',
         href: getPermalink('noticias', 'category')},
       ],
+
     
     },
     {
       title: '',
       links: [
         { text: 'Proyectos',
-        href: getPermalink('/projects')},
+        href: getPermalink('proyectos', 'category')},
         { text: 'Eventos',
         href: getPermalink('eventos', 'category')},
         { text: 'Becas',
