@@ -1,10 +1,10 @@
 ---
-publishDate: 2024-17-3T00:00:00Z
+publishDate: 2024-03-17T00:00:00Z
 title: 'Alcanzando los Cielos: Un Sueño Hecho Realidad para Mujeres Apasionadas por la Aviación'
+author: ACMA
+excerpt: Tres mujeres reciben experiencia para volar una aeronave en la Academia Antioqueña de Aviación.
 
-excerpt: 'Alcanzando los Cielos: Un Sueño Hecho Realidad para Mujeres Apasionadas por la Aviación'
-
-image: https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1651&q=80
+image: '~/assets/images/AAA.jpeg'
 category: becas
 tags:
   - becas
@@ -12,11 +12,8 @@ tags:
   - aviación
   - piloto
 metadata:
-  canonical: https://acma.netlify.app/experienciaAAA
+  canonical: https://acma.netlify.app/AAA
 ---
-
-import DListItem from '~/components/ui/DListItem.astro';
-import ToggleTheme from '~/components/common/ToggleTheme.astro';
 
 ## 
 
