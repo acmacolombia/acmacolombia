@@ -1,13 +1,10 @@
 ---
-import { SITE } from '~/utils/config';
----
+import lightLogo from "~/assets/images/ACMA.png";
+import darkLogo from "~/assets/images/ACMA.png";
 
-<a href="/">
-	<img
-		src="~/assets/favicon/ACMA.png" alt="ACMA Logo"
-	/>
-</a>
-<span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-  <img src="/assets/favicon/ACMA.png" alt="ACMA Logo" />
-  {SITE?.name}
-</span>
+---
+<div class="self-center ml-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
+  <img class="block dark:hidden" src={lightLogo} alt="Your Logo" />
+  <img class="hidden dark:block" src={darkLogo} alt="Your Logo" />
+  My Logo
+</div>
