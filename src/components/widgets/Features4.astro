@@ -1,13 +1,16 @@
 ---
 import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
 import Headline from "~/components/ui/Headline.astro";
-import ItemGrid2 from "~/components/ui/ItemGrid2.astro";
+import ItemGrid3 from "~/components/ui/ItemGrid3.astro";
 import type { Features } from "~/types";
+import type { CallToAction, Widget } from '~/types';
 
 const {
   title = await Astro.slots.render("title"),
   subtitle = await Astro.slots.render("subtitle"),
   tagline = await Astro.slots.render("tagline"),
+  actions = await Astro.slots.render('actions'),
+
   items = [],
   columns = 3,
   defaultIcon,
@@ -31,7 +34,7 @@ const {
     tagline={tagline}
     classes={classes?.headline}
   />
-  <ItemGrid2
+  <ItemGrid3
     items={items}
     columns={columns}
     defaultIcon={defaultIcon}
@@ -44,5 +47,6 @@ const {
       icon: "w-12 h-12 mb-6 text-primary",
       ...((classes?.items as {}) ?? {}),
     }}
+    
   />
 </WidgetWrapper>

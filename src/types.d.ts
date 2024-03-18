@@ -134,7 +134,6 @@ export interface Item {
   classes?: Record<string, string>;
   callToAction?: CallToAction;
   image?: Image;
-  href?: string;
 }
 
 export interface Price {
