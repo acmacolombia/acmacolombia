@@ -3,7 +3,7 @@ import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -30,6 +30,34 @@ const metadata = {
       La Asociación Colombiana de Mujeres en Aeroespacial se dedica a promover la participación, el desarrollo y el liderazgo de las mujeres en el campo aeroespacial. Unimos esfuerzos para inspirar a futuras generaciones y destacar la importancia de la diversidad en el sector.
     </Fragment>
   </Hero>
+
+<!-- Content Widget **************** -->
+
+<Content
+isReversed
+tagline=""
+title="Nuestra Misión"
+items={[
+
+]}
+image={{
+ src: '~/assets/images/favicon.svg',
+ alt: 'ACMA',
+}}
+>
+<Fragment slot="content">
+ <h3 class="text-2xl tracking-tight dark:text-white sm:text-2xl mb-2">   
+La Asociación Colombiana de Mujeres en Aeroespacial tiene como misión inspirar, empoderar y propulsar a niñas y mujeres en el campo aeroespacial, promoviendo su inclusión en todos los niveles de formación y ejercicio profesional, a través de la creación de una constelación diversa, la promoción de oportunidades educativas e investigativas, y el fortalecimiento de su presencia en la academia, la industria y la sociedad.
+</h3>
+
+</Fragment>
+
+<Fragment slot="bg">
+ <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+</Fragment>
+</Content>
+
+
 
   <!-- Stats Widget ****************** -->
 
