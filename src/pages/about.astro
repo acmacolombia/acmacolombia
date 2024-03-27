@@ -5,6 +5,9 @@ import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Content from '~/components/widgets/Content.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Team from '~/components/widgets/Team.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+
 
 const metadata = {
   title: 'Sobre ACMA',
@@ -13,13 +16,13 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-
+<!-- 
   <Hero
     tagline=""
     image={{
-      src: '',
-      alt: '',
-    }}
+      src: '~/assets/images/favicon.svg',
+      alt: 'ACMA',
+     }}
   >
     <Fragment slot="title">
       Impulsamos la participación de las Mujeres
@@ -29,11 +32,33 @@ const metadata = {
     <Fragment slot="subtitle">
       La Asociación Colombiana de Mujeres en Aeroespacial se dedica a promover la participación, el desarrollo y el liderazgo de las mujeres en el campo aeroespacial. Unimos esfuerzos para inspirar a futuras generaciones y destacar la importancia de la diversidad en el sector.
     </Fragment>
-  </Hero>
+  </Hero> -->
+
+<Content
+tagline=""
+title=""
+items={[
+
+]}
+image={{
+ src: '~/assets/images/favicon.svg',
+ alt: 'ACMA',
+}}
+> 
+
+<Fragment slot="content">
+  <h1 class="text-3xl font-bold text-accent dark:text-white highlight"> Impulsamos la participación de las Mujeres en el sector Aeroespacial </h1> 
+</br>
+ <h3 class="text-2xl tracking-tight dark:text-white sm:text-2xl mb-2">
+La Asociación Colombiana de Mujeres en Aeroespacial se dedica a promover la participación, el desarrollo y el liderazgo de las mujeres en el campo aeroespacial. Unimos esfuerzos para inspirar a futuras generaciones y destacar la importancia de la diversidad en el sector.
+</h3>
+</Fragment>
+
+</Content>
 
 <!-- Content Widget **************** -->
 
-<Content
+<!-- <Content
 isReversed
 tagline=""
 title="Nuestra Misión"
@@ -55,9 +80,166 @@ La Asociación Colombiana de Mujeres en Aeroespacial tiene como misión inspirar
 <Fragment slot="bg">
  <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
 </Fragment>
-</Content>
+</Content> -->
 
+<Steps2 
+title="Nuestra Misión"
+subtitle="La Asociación Colombiana de Mujeres en Aeroespacial tiene como misión inspirar, empoderar y propulsar a niñas y mujeres en el campo aeroespacial, promoviendo su inclusión en todos los niveles de formación y ejercicio profesional, a través de la creación de una constelación diversa, la promoción de oportunidades educativas e investigativas, y el fortalecimiento de su presencia en la academia, la industria y la sociedad."
+items={[
+  {
+    title: 'Inclusión',
+    description: 'Promovemos la igualdad de oportunidades y la diversidad dentro del sector aeroespacial.',
+    icon: 'tabler:users',
+  },
+  {
+    title: 'Colaboración',
+    description: 'Creemos en el poder de trabajar juntos para alcanzar nuestros objetivos comunes.',
+    icon: 'tabler:users',
+  },
+  {
+    title: 'Empoderamiento',
+    description: 'Empoderamos a las mujeres para que se conviertan en líderes y agentes de cambio en el sector aeroespacial.',
+    icon: 'tabler:star',
+  },
+]}
+/> 
 
+<!-- <Team>
+  <Fragment slot="title">
+    Nuestro Equipo
+  </Fragment>
+
+  <Fragment slot="subtitle">
+    Conoce a las mujeres que lideran y hacen posible la misión de la Asociación Colombiana de Mujeres en Aeroespacial.
+  </Fragment>
+
+  <Fragment slot="content">
+    <p>
+      Nuestro equipo está conformado por mujeres apasionadas y comprometidas con la promoción de la participación y el liderazgo de las mujeres en el sector aeroespacial. Juntas, trabajamos para inspirar, empoderar y propulsar a niñas y mujeres en el campo aeroespacial, promoviendo su inclusión en todos los niveles de formación y ejercicio profesional.
+    </p>
+  </Fragment>
+</Team>
+
+-->
+
+<!-- <Features2
+tagline=""
+title="Nuestro equipo"
+items={[
+  {
+    title: 'Maria Alejandra Botero Botero',
+    description: 'Presidenta',
+    image: {
+      src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+      alt: 'Maria Alejandra Botero Botero Image',
+    },
+  },
+  {
+    title: 'Daniela Calle',
+    description: 'Vicepresidenta',
+    image: {
+      src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Daniela Calle Image',
+    },
+  },
+  {
+    title: 'xxx', // Replace 'xxx' with the actual name of the Secretaria
+    description: 'Secretaria',
+    image: {
+      src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+      alt: 'Secretaria Image',
+    },
+  },
+  {
+    title: 'Laura Calle',
+    description: 'Tesorera',
+    image: {
+      src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+      alt: 'Laura Calle Image',
+    },
+  },
+  {
+    title: 'Eliana Álvarez Berrio',
+    description: 'Relaciones públicas',
+    image: {
+      src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',   
+      alt: 'Eliana Álvarez Berrio Image',
+    },
+  },
+  {
+    title: 'Juliana Tangarife',
+    description: 'Relaciones públicas',
+    image: {
+      src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Juliana Tangarife Image',
+    },
+  },
+  {
+    title: 'Danna Yuliza Giraldo Orozco',
+    description: 'STEAM',
+    image: {
+      src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+      alt: 'Danna Yuliza Giraldo Orozco Image',
+    },
+  },
+  {
+    title: 'Daniela Oviedo',
+    description: 'STEAM',
+    image: {
+      src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+      alt: 'Daniela Oviedo Image',
+    },
+  },
+  {
+    title: 'Paula Ramos',
+    description: 'Eventos',
+    image: {
+      src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+      alt: 'Paula Ramos Image',
+    },
+  },
+  {
+    title: 'Carolina Restrepo',
+    description: 'Gestión Humana',
+    image: {
+      src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+      alt: 'Carolina Restrepo Image',
+    },
+  },
+  {
+    title: 'Tatiana Gutierrez',
+    description: 'Consejeros',
+    image: {
+      src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+      alt: 'Tatiana Gutierrez Image',
+    },
+  },
+  {
+    title: 'Luz María Martínez',
+    description: 'Fundadoras',
+    image: {
+      src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+      alt: 'Luz María Martínez Image',
+    },
+  },
+  {
+    title: 'Andrea Martínez',
+    description: 'Fundadoras',
+    image: {
+      src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+      alt: 'Andrea Martínez Image',
+    },
+  },
+  {
+    title: 'Karen Álvarez',
+    description: 'Representante legal',
+    image: {
+      src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+      alt: 'Karen Álvarez Image',
+    },
+  },
+]}
+/> -->
 
   <!-- Stats Widget ****************** -->
 
@@ -117,7 +299,7 @@ items={[
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
+  <!-- <Features2
     title="Nuestro Propelente"
     tagline=""
     columns={4}
@@ -139,7 +321,144 @@ items={[
         description: 'Empoderamos a las mujeres para que se conviertan en líderes y agentes de cambio en el sector aeroespacial.',
       },
     ]}
-  />
+  /> -->
+
+  <!-- <Testimonials2
+  title="Junta Directiva"
+  testimonials={[
+{
+      testimonial: ``,
+      name: 'Maria Alejandra Botero Botero',
+      job: 'Presidenta',
+      image: {
+        src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+        alt: 'Maria Alejandra Botero Botero Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'Daniela Calle',
+      job: 'Vicepresidenta',
+      image: {
+        src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+        alt: 'Daniela Calle Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'xxx', // Replace 'xxx' with the actual name of the Secretaria
+      job: 'Secretaria',
+      image: {
+        src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+        alt: 'Secretaria Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'Laura Calle',
+      job: 'Tesorera',
+      image: {
+        src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+        alt: 'Laura Calle Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'Eliana Álvarez Berrio',
+      job: 'Relaciones públicas',
+      image: {
+        src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+        alt: 'Eliana Álvarez Berrio Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'Juliana Tangarife',
+      job: 'Relaciones públicas',
+      image: {
+        src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+        alt: 'Juliana Tangarife Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'Danna Yuliza Giraldo Orozco',
+      job: 'STEAM',
+      image: {
+        src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+        alt: 'Danna Yuliza Giraldo Orozco Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'Daniela Oviedo',
+      job: 'STEAM',
+      image: {
+        src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+        alt: 'Daniela Oviedo Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'Paula Ramos',
+      job: 'Eventos',
+      image: {
+        src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+        alt: 'Paula Ramos Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'Carolina Restrepo',
+      job: 'Gestión Humana',
+      image: {
+        src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+        alt: 'Carolina Restrepo Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'Tatiana Gutierrez',
+      job: 'Consejeros',
+      image: {
+        src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+        alt: 'Tatiana Gutierrez Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'Luz María Martínez',
+      job: 'Fundadoras',
+      image: {
+        src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+        alt: 'Luz María Martínez Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'Andrea Martínez',
+      job: 'Fundadoras',
+      image: {
+        src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+        alt: 'Andrea Martínez Image',
+      },
+    },
+    {
+      testimonial: ``,
+      name: 'Karen Álvarez',
+      job: 'Representante legal',
+      image: {
+        src: 'https://placeholder.com/image', // Replace with the appropriate image URL
+        alt: 'Karen Álvarez Image',
+      },
+    },
+
+    // Repeat for other members of the Junta Directiva as necessary
+  ]}
+/> -->
+
+
+
 
   <!-- Features3 Widget ************** -->
 
