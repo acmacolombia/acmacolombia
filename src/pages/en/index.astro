@@ -2,6 +2,8 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -10,148 +12,101 @@ import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
+import { getPermalink } from '~/utils/permalinks';
+
+
 const metadata = {
-  title: 'ACMA: Asociación Colombiana de Mujeres en Aeroespacial',
+  title: 'Colombian Association of Women in Aerospace - ACMA (Asociación Colombiana de Mujeres en Aeroespacial)',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="ACMA"
+  <!-- Hero2 Widget ******************* -->  
+  <Hero2
+    tagline="Colombian Association of Women in Aerospace"
     actions={[
       {
         variant: 'primary',
-        target: '_blank',
         text: 'Únete',
-        href: 'https://forms.gle/BVzbFWKxKjwiaxJx9',
+        href: getPermalink('/about#joinus'),
         icon: 'tabler:rocket',
       },
-      { text: 'Conócenos', href: '#features' },
     ]}
+    image={{
+      src: '~/assets/images/ACMA.png',
+      alt: 'ACMA Logo',
+      style: 'max-width: 80%; height: auto;',
+    }}
   >
     <Fragment slot="title">
-      Asociación Colombiana de Mujeres en Aeroespacial
+      ACMA
     </Fragment>
 
     <Fragment slot="subtitle">
-      ACMA es tu aliado para brillar en el ámbito aeroespacial, cultivando una constelación de apoyo que impulsa tu crecimiento. personal y profesional
+      <span class="hidden sm:inline">
+        We are your ally to shine in the aerospace field, cultivating a diverse constellation that drives your personal and professional growth.
     </Fragment>
-
-  </Hero>
-
-<!-- Features2 Widget ************** -->
-
-<Features2
-title="Acerca de Nosotras"
-subtitle="Somos una comunidad dedicada a promover la inclusión, el desarrollo profesional y la participación de las mujeres en el sector aeroespacial de Colombia."
->
-<Fragment slot="bg">
-  <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-</Fragment>
-</Features2>
+  </Hero2>
 
 <!-- Stats Widget ****************** -->
-
 <Stats
-title="Descubre el universo ACMA"
-subtitle="Contamos con una comunidad diversa y talentosa que impulsa el crecimiento y la participación de las mujeres en el sector aeroespacial."
+title="Discover the ACMA Universe"
+subtitle="We are a diverse and talented community dedicated to promoting inclusion, professional development, and participation of women in the aerospace sector."
 stats={[
-  { title: 'Lanzada en', amount: '2021' },
-  { title: 'Miembros', amount: '+400' },
-  { title: 'Proyectos', amount: '+10' },
-  { title: 'Becas', amount: '+20' },
+  // { title: 'Founded in', amount: '2021'}
+  { title: 'Members', amount: '400+' },
+  { title: 'Events Held', amount: '20+' },
+  { title: 'Projects', amount: '10+' },
+  { title: 'Scholarships', amount: '10+' },
 ]}
 />
 
- <!-- Features2 Widget ************** -->
-
- <Features2
- title="¿Qué te ofrecemos?"
- subtitle="Brindamos oportunidades y espacios de desarrollo para que las mujeres brillen en el sector aeroespacial."
- items={[
-   {
-     title: 'Proyectos',
-     description:
-       'Apoyamos la participación de mujeres en proyectos aeroespaciales, fomentando la inclusión y el desarrollo profesional.',
-     icon: 'flat-color-icons:document',
-   },
-   {
-     title: 'Becas',
-     description:
-       'Promovemos el acceso a oportunidades y el desarrollo profesional en el sector aeroespacial a través de becas y programas de formación.',
-     icon: 'flat-color-icons:document',
-   },
-   {
-     title: 'Charlas',
-     description:
-       'Brindamos espacios de diálogo y aprendizaje para fomentar el intercambio de conocimientos y experiencias en el sector aeroespacial.',
-     icon: 'flat-color-icons:document',
-   },
- ]}
->
- <Fragment slot="bg">
-   <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
- </Fragment>
-</Features2>
-
-<!-- Features Widget *************** -->
-
 <Features
- id="features"
- title="Nuestros proyectos"
- subtitle="Descubre cómo estamos impulsando el crecimiento y la participación de las mujeres en el sector aeroespacial."
- columns={3}
- items={[
-   {
-     title: 'Charlas y Conferencias',
-     description:
-       'Visibilizamos y promovemos la participación de mujeres en el sector aeroespacial.',
-     icon: 'tabler:presentation',
-   },
-   {
-     title: 'Mentorías',
-     description: 'Conectamos a mujeres con profesionales del sector aeroespacial para brindar orientación y apoyo.',
-     icon: 'tabler:heart-handshake',
-   },
-   {
-     title: 'Ferias Universitarias',
-     description: 'Participamos en la organización de ferias universitarias para promover el interés de las mujeres en el sector aeroespacial.',
-     icon: 'tabler:stars',
-   },
-   {
-     title: 'Concursos y Hackathons',
-     description: 'Apoyamos equipos diversos en concursos y hackathons aeroespaciales.',
-     icon: 'tabler:trophy',
-   },
-   {
-     title: 'Proyectos de Investigación',
-     description:
-       'Colaboramos en proyectos de investigación en el sector aeroespacial.',
-     icon: 'tabler:device-laptop',
-   },
-   {
-     title: 'Becas',
-     description: 'Ofrecemos becas para fomentar el acceso y el desarrollo profesional en el sector aeroespacial.',
-     icon: 'tabler:award',
-   },
- ]}
+id="features"
+title="Our Programs"
+subtitle="Discover how we are boosting growth and participation of women in the aerospace sector. We provide opportunities and development spaces for women to shine in the aerospace sector."
+columns={3}
+items={[
+  {
+    title: 'Talks and Conferences',
+    description: 'We provide spaces for dialogue and learning to promote the exchange of knowledge and experiences in the aerospace sector.',
+    icon: 'tabler:presentation',
+  },
+  {
+    title: 'Mentorships',
+    description: 'We connect women with professionals in the aerospace sector to provide guidance and support.',
+    icon: 'tabler:heart-handshake',
+  },
+  {
+    title: 'University Fairs',	
+    description: 'We participate in the organization of university fairs to promote women´s interest in the aerospace sector.',	
+    icon: 'tabler:stars',
+  },
+  {
+    title: 'Challenges and Hackathons',
+    description: 'We support diverse teams in aerospace competitions and hackathons.',	
+    icon: 'tabler:trophy',
+  },
+  {
+    title: 'Research Projects',
+    description: 'We collaborate in research projects in the aerospace sector.',	
+    icon: 'tabler:device-laptop',
+  },
+  {
+    title: 'Scholarships',
+    description: 'We offer scholarships to promote access and professional development in the aerospace sector.',
+    icon: 'tabler:award',
+  },
+]}
 />
 
-
-
-
-
-
-
-
- <!-- Brands Widget ****************** -->
-
+ <!-- Brands Widget ******************
  <Brands
  title="Aliados"
  subtitle="En ACMA, confiamos en el poder de la colaboración para impulsar la innovación y crecer juntos en el sector aeroespacial."
@@ -195,38 +150,31 @@ stats={[
      alt: 'Yahoo',
    },
  ]}
-/>
+/> -->
 
   <!-- Note Widget ******************* -->
-
-  <Note />
-
-
-
+  <!-- <Note /> -->
 
 
   <!-- HighlightedPosts Widget ******* -->
-
   <BlogLatestPosts
-    title="Encuentra todos nuestros artículos en nuestro blog"
+    title="Blog"
     information={`                `}
   />
 
   <!-- CallToAction Widget *********** -->
-
   <CallToAction
     actions={[{
       variant: "primary",
-      target: '_blank',
-      text: 'Inscríbete ahora',
-      href: 'https://forms.gle/BVzbFWKxKjwiaxJx9',
+      text: 'Join Us',
+      href: getPermalink('/about#joinus'),
       icon: 'tabler:rocket',
     }]}
   >
-    <Fragment slot="title">¿Listas para despegar? </Fragment>
+    <Fragment slot="title"> Ready for takeoff? </Fragment>
 
     <Fragment slot="subtitle">
-      Únete a ACMA y descubre un universo de posibilidades.
+      Join ACMA and discover a universe of possibilities.
     </Fragment>
   </CallToAction>
 </Layout>

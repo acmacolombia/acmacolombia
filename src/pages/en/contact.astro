@@ -10,69 +10,54 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+<!-- Features4 Widget ************** -->
+<Features4
+title="Do you have ideas to improve the community? Do you want to collaborate with us? Do you have any questions? Write to us!"
+items={[
+  {
+    title: 'Mail',
+    description: 'Write us your questions, suggestions or proposals.',
+    icon: 'tabler:mail',
+    href: 'mailto:acma.directiva@gmail.com',
+    callToAction: {
+      target: '_blank',
+      text: 'acma.directiva@gmail.com',
+      href: 'mailto:acma.directiva@gmail.com',
+    },
+  },
+  {
+    title: 'Instagram',
+    description: 'Stay informed about our activities and events.',
+    icon: 'tabler:brand-instagram',
+    href: 'https://instagram.com/acmacolombia',
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  },
+  {
+    title: 'Facebook',
+    description: 'Discover more about our association.',
+    icon: 'tabler:brand-facebook',
+    href: 'https://www.facebook.com/acmacolombia',
+  },
+  {
+    title: 'X',
+    description: 'Stay informed about our news.',
+    icon: 'tabler:brand-twitter', 
+    href: 'https://x.com/acmacolombia', 
+  },
+  {
+    title: 'LinkedIn',
+    description: 'Expand your professional network and discover opportunities.',
+    icon: 'tabler:brand-linkedin',
+    href: 'https://www.linkedin.com/company/acmacolombia',
+ },
+  {
+    title: 'YouTube',
+    description: 'Watch content about our association.',
+    icon: 'tabler:brand-youtube',
+    href: 'https://www.youtube.com/c/ACMAColombia',
+  },
+]}
+/>
 
-  <ContactUs
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  />
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="We are here to help!"
-    items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
 </Layout>
