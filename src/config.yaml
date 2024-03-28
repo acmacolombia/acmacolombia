@@ -1,10 +1,10 @@
 site:
   name: ACMA
-  site: 'https://acma.netlify.app'
+  site: 'https://acma.space'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: 
+  googleSiteVerificationId: tQIuhYQDnOMfO2X2MPWQs2gNebnnpp2HnmBMMNImpII
 
 # Default SEO metadata
 metadata:

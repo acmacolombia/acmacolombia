@@ -85,11 +85,11 @@ const DEFAULT_SITE_NAME = 'Website';
 const getSite = () => {
   const _default = {
     name: DEFAULT_SITE_NAME,
-    site: 'acma.space',
+    site: undefined,
     base: '/',
     trailingSlash: false,
 
-    googleSiteVerificationId: 'tQIuhYQDnOMfO2X2MPWQs2gNebnnpp2HnmBMMNImpII',
+    googleSiteVerificationId: '',
   };
 
   return merge({}, _default, config?.site ?? {}) as SiteConfig;
