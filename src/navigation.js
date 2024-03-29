@@ -135,11 +135,9 @@ export const getNavigationData = (url) => {
       { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml'), target: '_blank' },
       // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
     ],
-    footNote: `
-      Hecho por ACMA con <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · Todos los derechos reservados.
-    `,
-  },
-}
+    footNote: `${t('foot.madeby')} <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · ${t('foot.allrights')}`,
+    },
+  }
 }
 
 

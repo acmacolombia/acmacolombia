@@ -23,6 +23,8 @@
       'blog.readMore': 'Ver todos los artículos',
       'blog.new' : 'Nuevos artículos',
       'blog.prev': 'Artículos anteriores',
+      'foot.madeby': 'Hecho por ACMA con ❤️ y',
+      'foot.allrights': 'Todos los derechos reservados',
     },
     en: {
       'nav.about': 'About ACMA',
@@ -41,6 +43,8 @@
       'blog.readMore': 'View all posts',
       'blog.new' : 'New articles',
       'blog.prev': 'Previous articles',
+      'foot.madeby': 'Made by ACMA with ❤️ and',
+      'foot.allrights': 'All rights reserved',
 
     },
   } as const;
