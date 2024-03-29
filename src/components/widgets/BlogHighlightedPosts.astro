@@ -8,6 +8,11 @@ import { findPostsByIds } from "~/utils/blog";
 import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
 import type { Widget } from "~/types";
 
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+
+const activeLanguage = getLangFromUrl(Astro.url);
+const t = useTranslations(activeLanguage);
+
 export interface Props extends Widget {
   title?: string;
   linkText?: string;
@@ -18,7 +23,7 @@ export interface Props extends Widget {
 
 const {
   title = await Astro.slots.render("title"),
-  linkText = "Ver todos los artículos",
+  linkText = t('blog.readMore'),
   linkUrl = getBlogPermalink(),
   information = await Astro.slots.render("information"),
   postIds = [],

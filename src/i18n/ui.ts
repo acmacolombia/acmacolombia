@@ -19,8 +19,10 @@
       'blog.back': 'Atrás',
       'blog.readingTime': 'min de lectura',
       'share': 'Compartir:',
-      'blog.relatedposts': 'Artículos relacionados',
-      'blog.readmore': 'Ver todos los artículos',
+      'blog.relatedPosts': 'Artículos relacionados',
+      'blog.readMore': 'Ver todos los artículos',
+      'blog.new' : 'Nuevos artículos',
+      'blog.prev': 'Artículos anteriores',
     },
     en: {
       'nav.about': 'About ACMA',
@@ -35,8 +37,10 @@
       'blog.back': 'Back',	
       'blog.readingTime': 'min read',	
       'share': 'Share:',
-      'blog.relatedposts': 'Related posts',	
-      'blog.readmore': 'View all posts',
+      'blog.relatedPosts': 'Related posts',	
+      'blog.readMore': 'View all posts',
+      'blog.new' : 'New articles',
+      'blog.prev': 'Previous articles',
 
     },
   } as const;
