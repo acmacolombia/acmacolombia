@@ -25,6 +25,7 @@
       'blog.prev': 'Artículos anteriores',
       'foot.madeby': 'Hecho por ACMA con ❤️ y',
       'foot.allrights': 'Todos los derechos reservados',
+      'blog.viewAll': 'Ver todos los artículos',
     },
     en: {
       'nav.about': 'About ACMA',
@@ -45,6 +46,7 @@
       'blog.prev': 'Previous articles',
       'foot.madeby': 'Made by ACMA with ❤️ and',
       'foot.allrights': 'All rights reserved',
+      'blog.viewAll': 'View all posts',	
 
     },
   } as const;

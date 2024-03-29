@@ -17,9 +17,14 @@ export interface Props extends Widget {
   count?: number;
 }
 
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+
+const activeLanguage = getLangFromUrl(Astro.url);
+const t = useTranslations(activeLanguage);
+
 const {
   title = await Astro.slots.render("title"),
-  linkText = "Ver todos los artículos",
+  linkText = t('blog.viewAll'),
   linkUrl = getBlogPermalink(),
   information = await Astro.slots.render("information"),
   count = 4,
