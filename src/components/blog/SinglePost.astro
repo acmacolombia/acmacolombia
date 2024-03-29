@@ -8,8 +8,10 @@ import SocialShare from '~/components/common/SocialShare.astro';
 import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
-import { getLangFromUrl } from '~/i18n/utils';
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+
 const activeLanguage = getLangFromUrl(Astro.url);
+const t = useTranslations(activeLanguage);
 
 
 import type { Post } from '~/types';
@@ -53,7 +55,7 @@ const { Content } = post;
           {
             post.readingTime && (
               <>
-                &nbsp;· <span>{post.readingTime}</span> min read
+                &nbsp;· <span>{post.readingTime}</span> {t('blog.readingTime')}
               </>
             )
           }

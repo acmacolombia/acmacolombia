@@ -3,10 +3,10 @@ import { Icon } from 'astro-icon/components';
 import { getBlogPermalink } from '~/utils/permalinks';
 import { I18N } from '~/utils/config';
 import Button from '~/components/ui/Button.astro';
-
-import { getLangFromUrl } from '~/i18n/utils';
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
 
 const activeLanguage = getLangFromUrl(Astro.url);
+const t = useTranslations(activeLanguage);
 
 const { textDirection } = I18N;
 ---
@@ -19,6 +19,6 @@ const { textDirection } = I18N;
       ) : (
         <Icon name="tabler:chevron-left" class="w-5 h-5 mr-1 -ml-1.5 rtl:-mr-1.5 rtl:ml-1" />
       )
-    } Atrás
+    } {t('blog.back')}
   </Button>
 </div>

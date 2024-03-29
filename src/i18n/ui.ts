@@ -16,6 +16,8 @@
       'nav.scholarships': 'Becas',
       'nav.opportunities': 'Oportunidades',
       'nav.joinus': 'Únete',
+      'blog.back': 'Atrás',
+      'blog.readingTime': 'min de lectura',
     },
     en: {
       'nav.about': 'About ACMA',
@@ -27,6 +29,9 @@
       'nav.scholarships': 'Scholarships',
       'nav.opportunities': 'Opportunities',
       'nav.joinus': 'Join us',	
+      'blog.back': 'Back',	
+      'blog.readingTime': 'min read',	
+
     },
   } as const;
 

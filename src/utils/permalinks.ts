@@ -96,8 +96,12 @@ export const getBlogPermalink = (language = DEFAULT_LANGUAGE): string =>
   language === DEFAULT_LANGUAGE ? BLOG_BASE : getPermalink(language, BLOG_BASE);
 
 /** */
-export const getAsset = (path: string, language = DEFAULT_LANGUAGE): string =>
-  language === DEFAULT_LANGUAGE ? `${BASE_PATHNAME}${path}` : `/${language}${path}`;
+export const getAsset = (path: string): string =>
+  '/' +
+  [BASE_PATHNAME, path]
+    .map((el) => trimSlash(el))
+    .filter((el) => !!el)
+    .join('/');
 
 /** */
 const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, permalink);
