@@ -8,6 +8,10 @@ import SocialShare from '~/components/common/SocialShare.astro';
 import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
+import { getLangFromUrl } from '~/i18n/utils';
+const activeLanguage = getLangFromUrl(Astro.url);
+
+
 import type { Post } from '~/types';
 
 export interface Props {
@@ -40,7 +44,7 @@ const { Content } = post;
               <>
                 {' '}
                 ·{' '}
-                <a class="capitalize hover:underline inline-block" href={getPermalink(post.category, 'category')}>
+                <a class="capitalize hover:underline inline-block" href={getPermalink(activeLanguage, post.category, 'category')}>
                   {post.category.replaceAll('-', ' ')}
                 </a>
               </>

@@ -1,0 +1,26 @@
+---
+import { languages } from '~/i18n/ui';
+import { getLangFromUrl } from '~/i18n/utils';
+import { getHomePermalink } from '~/utils/permalinks';
+
+// const activeLanguage = getLangFromUrl(Astro.url);
+
+const activeLanguage = getLangFromUrl(Astro.url);
+
+// const newLocal = activeLanguage;
+
+// export newLocal; // Commented out because 'newLocal' is not defined
+
+// const activeLanguage = 'en'; // Example active language
+
+// export const activeLanguage = getLangFromUrl(Astro.url);
+
+const filteredLanguages = Object.entries(languages).filter(([lang]) => lang !== activeLanguage);
+---
+        <ul>
+            {filteredLanguages.map(([lang, label]) => (
+                <li key={lang}>
+                    <a href={getHomePermalink(lang)}>{label}</a>
+                </li>
+            ))}
+        </ul>

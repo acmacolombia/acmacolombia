@@ -1,0 +1,46 @@
+.team-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member img {
+  width: 231px;
+  height: 287px;
+  object-fit: cover;
+  border-radius: 8px 8px 50px 8px; /* Cambiado para adoptar la forma de la imagen */
+  overflow: hidden; /* Agregado para recortar la imagen */
+}
+
+.team-member h3 {
+  margin-top: 10px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #333;
+  margin: 0 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #555;
+}
+
+/* Hover effect */
+.team-member:hover {
+  transform: translateY(-10px);
+}

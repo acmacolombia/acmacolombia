@@ -1,204 +1,144 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
 
-export const headerData = {
-  links: [
-    // {
-    //   text: 'Homes',
-    //   links: [
-    //     {
-    //       text: 'SaaS',
-    //       href: getPermalink('/homes/saas'),
-    //     },
-    //     {
-    //       text: 'Startup',
-    //       href: getPermalink('/homes/startup'),
-    //     },
-    //     {
-    //       text: 'Mobile App',
-    //       href: getPermalink('/homes/mobile-app'),
-    //     },
-    //     {
-    //       text: 'Personal',
-    //       href: getPermalink('/homes/personal'),
-    //     },
-    //   ],
-    // },
-    {
-      text: 'Sobre ACMA',
-      href: getPermalink('/about'),
-    },
-    {
-      text: 'Noticias',
-      href: getPermalink('noticias', 'category'),
-    },
-    {
-      text: 'Oportunidades',
-      links: [
-        {
-          text: 'Proyectos',
-          href: getPermalink('proyectos', 'category'),
-        },
-        {
-          text: 'Eventos',
-          href: getPermalink('eventos', 'category'),
-        },
-        {
-          text: 'Becas',
-          href: getPermalink('becas', 'category'),
-        },
-      ],
-    },
+// import activeLang from '~/components/common/LanguagePicker.astro'
 
-    // {
-    //   text: 'Landing',
-    //   links: [
-    //     {
-    //       text: 'Lead Generation',
-    //       href: getPermalink('/landing/lead-generation'),
-    //     },
-    //     {
-    //       text: 'Long-form Sales',
-    //       href: getPermalink('/landing/sales'),
-    //     },
-    //     {
-    //       text: 'Click-Through',
-    //       href: getPermalink('/landing/click-through'),
-    //     },
-    //     {
-    //       text: 'Product Details (or Services)',
-    //       href: getPermalink('/landing/product'),
-    //     },
-    //     {
-    //       text: 'Coming Soon or Pre-Launch',
-    //       href: getPermalink('/landing/pre-launch'),
-    //     },
-    //     {
-    //       text: 'Subscription',
-    //       href: getPermalink('/landing/subscription'),
-    //     },
-    //   ],
-    // },
+// const currentLang = getLangFromUrl(URL);
+
+// const activeLang = getLangFromUrl(URL);
+// const activeLang = currentLang;
+
+export const getNavigationData = (url) => {
+  const currentLang = getLangFromUrl(url);
+  let activeLang;
+  if (currentLang === undefined) {
+    activeLang = 'es';
+   }
+    else {
+    activeLang = currentLang;
+    }
+  // const t = useTranslations(language);
+  return {headerData: {
+    links: [
+      {
+        text: 'Sobre ACMA',
+        href: getRelativeLocaleUrl(activeLang, '/about'),
+      },
+      {
+        text: 'Noticias',
+        href: getPermalink(activeLang, 'noticias', 'category'),
+      },
+      {
+        text: 'Oportunidades',
+        links: [
+          {
+            text: 'Proyectos',
+            href: getPermalink(activeLang, 'proyectos', 'category'),
+          },
+          {
+            text: 'Eventos',
+            href: getPermalink(activeLang, 'eventos', 'category'),
+          },
+          {
+            text: 'Becas',
+            href: getPermalink(activeLang, 'becas', 'category'),
+          },
+        ],
+      },
+
+      {
+        text: 'Blog',
+        href: getBlogPermalink(activeLang),
+      },
+          // {
+          //   text: 'Article',
+          //   href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+          // },
+          // {
+          //   text: 'Article (with MDX)',
+          //   href: getPermalink('markdown-elements-demo-post', 'post'),
+          // },
+          // {
+          //   text: 'Category Page',
+          //   href: getPermalink('tutorials', 'category'),
+          // },
+          // {
+          //   text: 'Tag Page',
+          //   href: getPermalink('astro', 'tag'),
+          // },
+      //   ],
+      // },
+      // {
+      //   text: 'Widgets',
+      //   href: '#',
+      // },
     {
-      text: 'Blog',
-      href: getBlogPermalink(),
+      text: 'Contáctanos',
+      href: getRelativeLocaleUrl(activeLang, '/contact'),
     },
-        // {
-        //   text: 'Article',
-        //   href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        // },
-        // {
-        //   text: 'Article (with MDX)',
-        //   href: getPermalink('markdown-elements-demo-post', 'post'),
-        // },
-        // {
-        //   text: 'Category Page',
-        //   href: getPermalink('tutorials', 'category'),
-        // },
-        // {
-        //   text: 'Tag Page',
-        //   href: getPermalink('astro', 'tag'),
-        // },
-    //   ],
-    // },
-    // {
-    //   text: 'Widgets',
-    //   href: '#',
-    // },
-  {
-    text: 'Contáctanos',
-    href: getPermalink('/contact'),
+    ],
+    actions: [{ text: 'Únete', href: getRelativeLocaleUrl(activeLang, '/about#joinus') }],
   },
-  ],
-  actions: [{ text: 'Únete', href: getPermalink('/about#joinus') }],
-};
 
-export const footerData = {
-  links: [
-    // {
-    //   title: 'Product',
-    //   links: [
-    //     { text: 'Features', href: '#' },
-    //     { text: 'Security', href: '#' },
-    //     { text: 'Team', href: '#' },
-    //     { text: 'Enterprise', href: '#' },
-    //     { text: 'Customer stories', href: '#' },
-    //     { text: 'Pricing', href: '#' },
-    //     { text: 'Resources', href: '#' },
-    //   ],
-    // },
-    // {
-    //   title: 'Platform',
-    //   links: [
-    //     { text: 'Developer API', href: '#' },
-    //     { text: 'Partners', href: '#' },
-    //     { text: 'Atom', href: '#' },
-    //     { text: 'Electron', href: '#' },
-    //     { text: 'AstroWind Desktop', href: '#' },
-    //   ],
-    // },
-    // {
-    //   title: 'Support',
-    //   links: [
-    //     { text: 'Docs', href: '#' },
-    //     { text: 'Community Forum', href: '#' },
-    //     { text: 'Professional Services', href: '#' },
-    //     { text: 'Skills', href: '#' },
-    //     { text: 'Status', href: '#' },
-    //   ],
-    // },
-    {
-      title: '',
-      links: [
-        { text: 'Sobre ACMA',
-        href: getPermalink('/about') },
-        { text: 'Blog',
-        href: getBlogPermalink()},
-        { text: 'Noticias',
-        href: getPermalink('noticias', 'category')},
-      ],
+  footerData: {
+    links: [
 
-    
-    },
-    {
-      title: '',
-      links: [
-        { text: 'Proyectos',
-        href: getPermalink('proyectos', 'category')},
-        { text: 'Eventos',
-        href: getPermalink('eventos', 'category')},
-        { text: 'Becas',
-        href: getPermalink('becas', 'category')},
-      ],
-    
-    },
-    {
-      title: '',
-      links: [
-        { text: 'Contáctanos',
-        href: getPermalink('/contact')},
-        { text: 'Únete', 
-        href: getPermalink('/about#joinus') },
-      ],
-    
-    },
-  ],
-  secondaryLinks: [
-    { text: 'Términos', href: getPermalink('/terms') },
-    { text: 'Política de privacidad', href: getPermalink('/privacy') },
-  ],
-  socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/acmacolombia', target: '_blank' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/acmacolombia', target: '_blank' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/acmacolombia', target: '_blank' },
-    { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/acmacolombia', target: '_blank', },
-    { ariaLabel: 'Youtube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/c/ACMAColombia', target: '_blank' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml'), target: '_blank' },
-    // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
-  ],
-  footNote: `
-    Hecho por ACMA con <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · Todos los derechos reservados.
-  `,
-};
+      {
+        title: '',
+        links: [
+          { text: 'Sobre ACMA',
+          href: getRelativeLocaleUrl(activeLang, '/about') },
+          { text: 'Blog',
+          href: getBlogPermalink(activeLang)},
+          { text: 'Noticias',
+          href: getPermalink(activeLang, 'noticias', 'category')},
+        ],
+
+      
+      },
+      {
+        title: '',
+        links: [
+          // { text: 'Proyectos',
+          // href: getRelativeLocaleUrl(getPermalink('proyectos', 'category'))},
+          // { text: 'Eventos',
+          // href: getRelativeLocaleUrl(getPermalink('eventos', 'category'))},
+          // { text: 'Becas',
+          // href: getRelativeLocaleUrl(getPermalink('becas', 'category'))},
+        ],
+      
+      },
+      {
+        title: '',
+        links: [
+          { text: 'Contáctanos',
+          href: getRelativeLocaleUrl(activeLang, '/contact')},
+          { text: 'Únete', 
+          href: getRelativeLocaleUrl(activeLang, '/about#joinus') },
+        ],
+      
+      },
+    ],
+    secondaryLinks: [
+      { text: 'Términos', href: getRelativeLocaleUrl(activeLang, '/terms') },
+      { text: 'Política de privacidad', href: getRelativeLocaleUrl(activeLang, '/privacy') },
+    ],
+    socialLinks: [
+      { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/acmacolombia', target: '_blank' },
+      { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/acmacolombia', target: '_blank' },
+      { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/acmacolombia', target: '_blank' },
+      { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/acmacolombia', target: '_blank', },
+      { ariaLabel: 'Youtube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/c/ACMAColombia', target: '_blank' },
+      { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml'), target: '_blank' },
+      // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    ],
+    footNote: `
+      Hecho por ACMA con <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · Todos los derechos reservados.
+    `,
+  },
+}
+}
 
 
 // import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';

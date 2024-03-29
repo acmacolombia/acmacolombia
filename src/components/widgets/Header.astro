@@ -9,6 +9,11 @@ import { getHomePermalink } from "~/utils/permalinks";
 import { trimSlash, getAsset } from "~/utils/permalinks";
 import type { CallToAction } from "~/types";
 
+import LanguagePicker from '~/components/common/LanguagePicker.astro';
+import { getLangFromUrl } from '~/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+
 interface Link {
   text?: string;
   href?: string;
@@ -67,7 +72,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
     ]}
   >
     <div class:list={[{ "mr-auto rtl:mr-0 rtl:ml-auto": position === "right" }, "flex justify-between"]}>
-      <a class="flex items-center" href={getHomePermalink()}>
+      <a class="flex items-center" href={getHomePermalink(lang)}>
         <Logo />
       </a>
       <div class="flex items-center md:hidden">
@@ -128,6 +133,9 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
       ]}
     >
       <div class="items-center flex justify-between w-full md:w-auto">
+        <div class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center">
+        <LanguagePicker />
+        </div>
         <div class="flex">
           {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
           {

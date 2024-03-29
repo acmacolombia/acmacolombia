@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
@@ -27,14 +28,14 @@ const metadata = {
 
 <Layout metadata={metadata}>
 
-  <!-- Hero2 Widget ******************* -->  
+<!-- Hero2 Widget ******************* -->  
   <Hero2
     tagline="Colombian Association of Women in Aerospace"
     actions={[
       {
         variant: 'primary',
-        text: 'Únete',
-        href: getPermalink('/about#joinus'),
+        text: 'Join Us',
+        href: getRelativeLocaleUrl('en', 'about#joinus'),
         icon: 'tabler:rocket',
       },
     ]}
@@ -167,7 +168,7 @@ items={[
     actions={[{
       variant: "primary",
       text: 'Join Us',
-      href: getPermalink('/about#joinus'),
+      href: getRelativeLocaleUrl('en', 'about#joinus'),
       icon: 'tabler:rocket',
     }]}
   >

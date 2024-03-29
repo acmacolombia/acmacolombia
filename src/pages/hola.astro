@@ -1,9 +1,9 @@
 ---
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+// import Features from '~/components/widgets/Features.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
+// import Hero from '~/components/widgets/Hero.astro';
+// import Stats from '~/components/widgets/Stats.astro';
+// import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -13,7 +13,14 @@ const metadata = {
 
 <Layout metadata={metadata} >
   <!-- Hero Widget ******************* -->
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflRQBsftLug4uyxL7EiRKdwFI1v-_k2zon9IbR8AgIHO-KqQ/viewform?embedded=true" 
-  width="100%" height="2400px">Cargando…</iframe>
-</div>
+  <div id="ff-compose"></div>
+  <script async defer src="https://formfacade.com/include/102885829709643288732/form/1FAIpQLSflRQBsftLug4uyxL7EiRKdwFI1v-_k2zon9IbR8AgIHO-KqQ/classic.js?div=ff-compose"></script>
+
+
+
+  <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflRQBsftLug4uyxL7EiRKdwFI1v-_k2zon9IbR8AgIHO-KqQ/viewform?embedded=true" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:200px;width:100%;border:none;overflow:hidden;"></iframe> -->
+
+
+  <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflRQBsftLug4uyxL7EiRKdwFI1v-_k2zon9IbR8AgIHO-KqQ/viewform?embedded=true" 
+  width="100%" height="2400px">Cargando…</iframe> -->
 </Layout>

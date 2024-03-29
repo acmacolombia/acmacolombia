@@ -5,6 +5,9 @@ import { fetchPosts, getRelatedPosts } from "~/utils/blog";
 import BlogHighlightedPosts from "../widgets/BlogHighlightedPosts.astro";
 import type { Post } from "~/types";
 import { getBlogPermalink } from "~/utils/permalinks";
+import { getLangFromUrl } from '~/i18n/utils';
+
+const activeLanguage = getLangFromUrl(Astro.url);
 
 export interface Props {
   post: Post;
@@ -21,7 +24,7 @@ const relatedPosts = post.tags ? getRelatedPosts(fetchedPosts, post.slug, post.t
       classes={{ container: "pt-0 lg:pt-0 md:pt-0" }}
       title="Artículos Relacionados"
       linkText="Ver todos los artículos"
-      linkUrl={getBlogPermalink()}
+      linkUrl={getBlogPermalink(activeLanguage)}
       postIds={relatedPosts.map((post) => post.id)}
     />
   ) : null
