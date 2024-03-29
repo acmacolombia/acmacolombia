@@ -18,6 +18,9 @@
       'nav.joinus': 'Únete',
       'blog.back': 'Atrás',
       'blog.readingTime': 'min de lectura',
+      'share': 'Compartir:',
+      'blog.relatedposts': 'Artículos relacionados',
+      'blog.readmore': 'Ver todos los artículos',
     },
     en: {
       'nav.about': 'About ACMA',
@@ -31,6 +34,9 @@
       'nav.joinus': 'Join us',	
       'blog.back': 'Back',	
       'blog.readingTime': 'min read',	
+      'share': 'Share:',
+      'blog.relatedposts': 'Related posts',	
+      'blog.readmore': 'View all posts',
 
     },
   } as const;

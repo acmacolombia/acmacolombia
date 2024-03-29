@@ -7,11 +7,16 @@ export interface Props {
   class?: string;
 }
 
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+
+const activeLanguage = getLangFromUrl(Astro.url);
+const t = useTranslations(activeLanguage);
+
 const { text, url, class: className = 'inline-block' } = Astro.props;
 ---
 
 <div class={className}>
-  <span class="align-super font-bold text-gray-400 dark:text-slate-400">Share:</span>
+  <span class="align-super font-bold text-gray-400 dark:text-slate-400">{t('share')}</span>
   <button class="ml-2 rtl:ml-0 rtl:mr-2" title="Twitter Share" data-aw-social-share="twitter" data-aw-url={url} data-aw-text={text}
     ><Icon
       name="tabler:brand-x"

@@ -5,9 +5,10 @@ import { fetchPosts, getRelatedPosts } from "~/utils/blog";
 import BlogHighlightedPosts from "../widgets/BlogHighlightedPosts.astro";
 import type { Post } from "~/types";
 import { getBlogPermalink } from "~/utils/permalinks";
-import { getLangFromUrl } from '~/i18n/utils';
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
 
 const activeLanguage = getLangFromUrl(Astro.url);
+const t = useTranslations(activeLanguage);
 
 export interface Props {
   post: Post;
@@ -22,8 +23,8 @@ const relatedPosts = post.tags ? getRelatedPosts(fetchedPosts, post.slug, post.t
   APP_BLOG.isRelatedPostsEnabled ? (
     <BlogHighlightedPosts
       classes={{ container: "pt-0 lg:pt-0 md:pt-0" }}
-      title="Artículos Relacionados"
-      linkText="Ver todos los artículos"
+      title={t('blog.relatedPosts')}	
+      linkText={t('blog.readMore')}
       linkUrl={getBlogPermalink(activeLanguage)}
       postIds={relatedPosts.map((post) => post.id)}
     />
