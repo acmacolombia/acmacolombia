@@ -11,44 +11,46 @@ import { getLangFromUrl, useTranslations } from '~/i18n/utils';
 
 export const getNavigationData = (url) => {
   const currentLang = getLangFromUrl(url);
-  let activeLang;
-  if (currentLang === undefined) {
-    activeLang = 'es';
-   }
-    else {
-    activeLang = currentLang;
-    }
+  const t = useTranslations(currentLang);
+  const activeLang = currentLang;
+  // let activeLang;
+  // if (currentLang === undefined) {
+  //   activeLang = 'es';
+  //  }
+  //   else {
+  //   activeLang = currentLang;
+  //   }
   // const t = useTranslations(language);
   return {headerData: {
     links: [
       {
-        text: 'Sobre ACMA',
+        text: t('nav.about'),
         href: getRelativeLocaleUrl(activeLang, '/about'),
       },
       {
-        text: 'Noticias',
+        text: t('nav.news'),
         href: getPermalink(activeLang, 'noticias', 'category'),
       },
       {
-        text: 'Oportunidades',
+        text: t('nav.opportunities'),
         links: [
           {
-            text: 'Proyectos',
+            text: t('nav.projects'),
             href: getPermalink(activeLang, 'proyectos', 'category'),
           },
           {
-            text: 'Eventos',
+            text: t('nav.events'),
             href: getPermalink(activeLang, 'eventos', 'category'),
           },
           {
-            text: 'Becas',
+            text: t('nav.scholarships'),
             href: getPermalink(activeLang, 'becas', 'category'),
           },
         ],
       },
 
       {
-        text: 'Blog',
+        text: t('nav.blog'),
         href: getBlogPermalink(activeLang),
       },
           // {
@@ -74,11 +76,11 @@ export const getNavigationData = (url) => {
       //   href: '#',
       // },
     {
-      text: 'Contáctanos',
+      text: t('nav.contact'),
       href: getRelativeLocaleUrl(activeLang, '/contact'),
     },
     ],
-    actions: [{ text: 'Únete', href: getRelativeLocaleUrl(activeLang, '/about#joinus') }],
+    actions: [{ text: t('nav.joinus'), href: getRelativeLocaleUrl(activeLang, '/about#joinus') }],
   },
 
   footerData: {
@@ -87,11 +89,11 @@ export const getNavigationData = (url) => {
       {
         title: '',
         links: [
-          { text: 'Sobre ACMA',
+          { text: t('nav.about'),
           href: getRelativeLocaleUrl(activeLang, '/about') },
-          { text: 'Blog',
+          { text: t('nav.blog'),
           href: getBlogPermalink(activeLang)},
-          { text: 'Noticias',
+          { text: t('nav.news'),
           href: getPermalink(activeLang, 'noticias', 'category')},
         ],
 
@@ -112,17 +114,17 @@ export const getNavigationData = (url) => {
       {
         title: '',
         links: [
-          { text: 'Contáctanos',
+          { text: t('nav.contact'),
           href: getRelativeLocaleUrl(activeLang, '/contact')},
-          { text: 'Únete', 
+          { text: t('nav.joinus'),
           href: getRelativeLocaleUrl(activeLang, '/about#joinus') },
         ],
       
       },
     ],
     secondaryLinks: [
-      { text: 'Términos', href: getRelativeLocaleUrl(activeLang, '/terms') },
-      { text: 'Política de privacidad', href: getRelativeLocaleUrl(activeLang, '/privacy') },
+      { text: t('nav.term'), href: getRelativeLocaleUrl(activeLang, '/terms') },
+      { text: t('nav.policy'), href: getRelativeLocaleUrl(activeLang, '/privacy') },
     ],
     socialLinks: [
       { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/acmacolombia', target: '_blank' },
