@@ -40,6 +40,30 @@ export const getCanonical = (path = 'es'): string | URL => {
 };
 
 /** */
+export const getPermalink_nolang = (slug = '', type = 'page'): string => {
+  let permalink: string;
+    switch (type) {
+      case 'category':
+        permalink = createPath(CATEGORY_BASE, trimSlash(slug));
+        break;
+  
+      case 'tag':
+        permalink = createPath(TAG_BASE, trimSlash(slug));
+        break;
+  
+      case 'post':
+        permalink = createPath(trimSlash(slug));
+        break;
+  
+      case 'page':
+      default:
+        permalink = createPath(slug);
+        break;  
+      }
+      return definitivePermalink(permalink);
+  };
+
+/** */
 export const getPermalink = (language = DEFAULT_LANGUAGE, slug = '', type = 'page'): string => {
   let permalink: string;
   if (language === DEFAULT_LANGUAGE) {
