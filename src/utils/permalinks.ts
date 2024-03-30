@@ -93,7 +93,7 @@ export const getHomePermalink = (language = DEFAULT_LANGUAGE): string =>
 
 /** */
 export const getBlogPermalink = (language = DEFAULT_LANGUAGE): string =>
-  language === DEFAULT_LANGUAGE ? BLOG_BASE : getPermalink(language, BLOG_BASE);
+  language === DEFAULT_LANGUAGE ? `/${BLOG_BASE}` : getPermalink(language, BLOG_BASE);
 
 /** */
 export const getAsset = (path: string): string =>
