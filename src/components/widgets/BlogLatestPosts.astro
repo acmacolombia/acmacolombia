@@ -25,7 +25,7 @@ const t = useTranslations(activeLanguage);
 const {
   title = await Astro.slots.render("title"),
   linkText = t('blog.viewAll'),
-  linkUrl = getBlogPermalink(),
+  linkUrl = getBlogPermalink(activeLanguage),
   information = await Astro.slots.render("information"),
   count = 4,
 
