@@ -44,19 +44,19 @@ apps:
 
     list:
       isEnabled: true
-      pathname: 'Artículos' # Blog main path, you can change this to "articles" (/articles)
+      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
       robots:
         index: true
 
     category:
       isEnabled: true
-      pathname: 'Noticias' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
       robots:
         index: true
 
     tag:
       isEnabled: true
-      pathname: 'Temas' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      pathname: 'topics' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
       robots:
         index: true
 
