@@ -9,9 +9,10 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: ACMA
+    default: ACMA:Asociación Colombiana de Mujeres en Aeroespacial
     template: '%s — AstroWind'
-  description: "Asociación Colombiana de Mujeres en Aeroespacial"
+  description: "La Asociación Colombiana de Mujeres en Aeroespacial se dedica a promover la participación, el desarrollo y el liderazgo de las mujeres en el campo aeroespacial. Unimos esfuerzos para inspirar a futuras generaciones y destacar la importancia de la diversidad en el sector.
+"
   robots:
     index: true
     follow: true
