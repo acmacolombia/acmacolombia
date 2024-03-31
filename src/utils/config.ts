@@ -21,6 +21,9 @@ export interface I18NConfig {
   language: string;
   textDirection: string;
   dateFormatter?: Intl.DateTimeFormat;
+  isEnabled: boolean;
+  defaultLocale: string;
+  locales: { [key: string]: string };
 }
 export interface AppBlogConfig {
   isEnabled: boolean;
@@ -118,14 +121,20 @@ const getMetadata = () => {
 
 const getI18N = () => {
   const _default = {
+    isEnabled: false,
+    defaultLocale: 'es',
     language: 'es',
+    locales: {
+      es: 'es',
+      en: 'en',  // the `defaultLocale` value must present in `locales` keys
+    },
     textDirection: 'ltr',
   };
 
   const value = merge({}, _default, config?.i18n ?? {});
 
   return Object.assign(value, {
-    dateFormatter: new Intl.DateTimeFormat(value.language, {
+    dateFormatter: new Intl.DateTimeFormat(value.defaultLocale, {
       year: 'numeric',
       month: 'short',
       day: 'numeric',

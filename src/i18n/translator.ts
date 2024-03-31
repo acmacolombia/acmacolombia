@@ -1,5 +1,6 @@
 import { I18N } from '~/utils/config';
 import { en } from './en';
+// import { getLocale } from 'astro-i18n-aut';
 
 type Translations = any;
 
@@ -39,14 +40,14 @@ function getListFromPath(obj: NestedObject, path: string): NestedObject[] | unde
   return Array.isArray(value) ? value : undefined;
 }
 
-export function getLocaleFromUrl(url: URL) {
-  const lang = getLocale(url) || defaultLocale;
+// export function getLocaleFromUrl(url: URL) {
+//   const lang = getLocale(url) || defaultLocale;
 
-  if (!Object.keys(locales).includes(lang)) {
-    console.error('The identified lang' + lang + ' is not in the I18N');
-  }
-  return lang;
-}
+//   if (!Object.keys(locales).includes(lang)) {
+//     console.error('The identified lang' + lang + ' is not in the I18N');
+//   }
+//   return lang;
+// }
 
 export function useTranslations(lang: keyof typeof locales) {
   let translations: Translations;
@@ -55,9 +56,9 @@ export function useTranslations(lang: keyof typeof locales) {
     case 'en':
       translations = en;
       break;
-    case 'fr':
-      translations = fr;
-      break;
+    // case 'fr':
+    //   translations = fr;
+    //   break;
     default:
       translations = en;
       break;
