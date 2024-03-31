@@ -8,11 +8,6 @@ import { findPostsByIds } from "~/utils/blog";
 import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
 import type { Widget } from "~/types";
 
-import { getLangFromUrl, useTranslations } from '~/i18n/utils';
-
-const activeLanguage = getLangFromUrl(Astro.url);
-const t = useTranslations(activeLanguage);
-
 export interface Props extends Widget {
   title?: string;
   linkText?: string;
@@ -21,10 +16,15 @@ export interface Props extends Widget {
   postIds: string[];
 }
 
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+
+const locale = getLangFromUrl(Astro.url);
+const t = useTranslations(locale);
+
 const {
   title = await Astro.slots.render("title"),
-  linkText = t('blog.readMore'),
-  linkUrl = getBlogPermalink(activeLanguage),
+  linkText = t('blog.viewAll'),
+  linkUrl = getBlogPermalink(),
   information = await Astro.slots.render("information"),
   postIds = [],
 
@@ -34,12 +34,12 @@ const {
   bg = await Astro.slots.render("bg"),
 } = Astro.props;
 
-const posts = APP_BLOG.isEnabled ? await findPostsByIds(postIds) : [];
+const posts = APP_BLOG.isEnabled ? await findPostsByIds(postIds, locale) : [];
 ---
 
 {
   APP_BLOG.isEnabled ? (
-    <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container} bg={bg}>
+    <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
       <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
         {title && (
           <div class="md:max-w-sm">
