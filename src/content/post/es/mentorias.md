@@ -12,7 +12,7 @@ tags:
   - mentorías
   - crecimiento
 metadata:
-  canonical: https://acma.netlify.app/AAA
+  canonical: https://acma.space/mentorias
 ---
 
 ## 

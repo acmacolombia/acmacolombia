@@ -12,7 +12,7 @@ tags:
   - aviación
   - piloto
 metadata:
-  canonical: https://acma.netlify.app/AAA
+  canonical: https://acma.space/AAA
 ---
 
 ## 

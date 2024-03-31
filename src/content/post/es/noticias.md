@@ -5,11 +5,11 @@ author: ACMA
 excerpt: Noticia
 
 image: '~/assets/images/AAA.jpeg'
-category: Noticias
+category: noticias
 tags:
-  - Noticias
+  - noticias
 metadata:
-  canonical: https://acma.netlify.app/AAA
+  canonical: https://acma.space/noticias
 ---
 
 ## 

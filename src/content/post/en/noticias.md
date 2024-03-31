@@ -1,19 +1,19 @@
 ---
 publishDate: 2024-03-17T00:00:00Z
-title: 'Noticia'
+title: 'New'
 author: ACMA
-excerpt: Noticia
+excerpt: New
 
 image: '~/assets/images/AAA.jpeg'
 category: noticias
 tags:
-  - noticias
+  - news
 metadata:
-  canonical: https://acma.netlify.app/AAA
+  canonical: https://acma.space/en/news
 ---
 
 ## 
-Noticias
+News
 
 
 

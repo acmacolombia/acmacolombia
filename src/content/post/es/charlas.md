@@ -8,17 +8,12 @@ image: '~/assets/images/AAA.jpeg'
 category: eventos
 tags:
   - eventos
-  - charlas
-  - aeroespacial
-  - Colombia
 metadata:
-  canonical: https://acma.netlify.app/AAA
+  canonical: https://acma.space/charlas
 ---
 
 ## 
-Charlas
-
-
+Charla
 
 
 

@@ -1,24 +1,19 @@
 ---
 publishDate: 2024-03-17T00:00:00Z
-title: 'Charlas'
+title: 'Talks'
 author: ACMA
-excerpt: Charlas
+excerpt: Talks
 
 image: '~/assets/images/AAA.jpeg'
 category: eventos
 tags:
   - eventos
-  - charlas
-  - aeroespacial
-  - Colombia
 metadata:
-  canonical: https://acma.netlify.app/AAA
+  canonical: https://acma.space/en/talks
 ---
 
 ## 
-Charlas
-
-
+Talks
 
 
 
