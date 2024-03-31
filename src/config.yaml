@@ -30,6 +30,11 @@ metadata:
 
 i18n:
   language: es
+  isEnabled: true
+  defaultLocale: es
+  locales:
+    es: es
+    en: en
   textDirection: ltr
 
 apps:
@@ -39,7 +44,7 @@ apps:
 
     post:
       isEnabled: true
-      permalink: 'blog/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
         index: true
 
