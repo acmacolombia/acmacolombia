@@ -9,10 +9,8 @@ import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
-
 const activeLanguage = getLangFromUrl(Astro.url);
 const t = useTranslations(activeLanguage);
-
 
 import type { Post } from '~/types';
 
@@ -46,7 +44,7 @@ const { Content } = post;
               <>
                 {' '}
                 ·{' '}
-                <a class="capitalize hover:underline inline-block" href={getPermalink(activeLanguage, post.category, 'category')}>
+                <a class="capitalize hover:underline inline-block" href={getPermalink(post.category, 'category')}>
                   {post.category.replaceAll('-', ' ')}
                 </a>
               </>
