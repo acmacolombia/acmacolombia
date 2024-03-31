@@ -1,5 +1,4 @@
 ---
-import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
 import { blogCategoryRobots, getStaticPathsBlogCategory } from '~/utils/blog';
 
 import Layout from '~/layouts/PageLayout.astro';
@@ -7,15 +6,15 @@ import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
 
-export const prerender = true;
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+const locale = getLangFromUrl(Astro.url);
+const t = useTranslations(locale);
 
-export const getStaticPaths = (async ({ paginate }) => {
+export async function getStaticPaths ({ paginate }) {
   return await getStaticPathsBlogCategory({ paginate });
-}) satisfies GetStaticPaths;
+}
 
-type Props = InferGetStaticPropsType<typeof getStaticPaths> & { category: string };
-
-const { page, category } = Astro.props as Props;
+const { page, category } = Astro.props;
 
 const currentPage = page.currentPage ?? 1;
 
@@ -31,7 +30,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline><span class="capitalize">{category.replaceAll('-', ' ')}</span></Headline>
-    <BlogList posts={page.data} />
+    <BlogList posts={page.data.map(p => p.locales[locale])} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
 </Layout>

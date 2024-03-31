@@ -1,6 +1,4 @@
 ---
-import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
-
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
@@ -9,15 +7,15 @@ import Pagination from '~/components/blog/Pagination.astro';
 
 import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
 
-export const prerender = true;
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+const locale = getLangFromUrl(Astro.url);
+const t = useTranslations(locale);
 
-export const getStaticPaths = (async ({ paginate }) => {
+export async function getStaticPaths ({ paginate }) {
   return await getStaticPathsBlogList({ paginate });
-}) satisfies GetStaticPaths;
+}
 
-type Props = InferGetStaticPropsType<typeof getStaticPaths>;
-
-const { page } = Astro.props as Props;
+const { page } = Astro.props;
 const currentPage = page.currentPage ?? 1;
 
 // const allCategories = await findCategories();
@@ -38,11 +36,11 @@ const metadata = {
 <Layout metadata={metadata}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline
-      subtitle="Encuentra aquí artículos escritos por la comunidad. ¿Quieres compartir algo? ¡Escríbenos!"
+      subtitle={t('blog.subtitle')}
     >
-      Artículos
+      {t('blog.title')}
     </Headline>
-    <BlogList posts={page.data} />
+    <BlogList posts={page.data.map(p => p.locales[locale])} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
     <!--
       <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />

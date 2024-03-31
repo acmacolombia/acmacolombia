@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { getRelativeLocaleUrl } from 'astro:i18n';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
@@ -17,7 +16,7 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
-import { getPermalink } from '~/utils/permalinks';
+import { getLocalizedPermalink, getPermalink } from '~/utils/permalinks';
 
 
 const metadata = {
@@ -35,7 +34,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Join Us',
-        href: getRelativeLocaleUrl('en', 'about#joinus'),
+        href: getLocalizedPermalink('en', 'about#joinus'),
         icon: 'tabler:rocket',
       },
     ]}
@@ -52,6 +51,7 @@ const metadata = {
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
         We are your ally to shine in the aerospace field, cultivating a diverse constellation that drives your personal and professional growth.
+      </span>
     </Fragment>
   </Hero2>
 
@@ -168,7 +168,7 @@ items={[
     actions={[{
       variant: "primary",
       text: 'Join Us',
-      href: getRelativeLocaleUrl('en', 'about#joinus'),
+      href: getLocalizedPermalink('en', 'about#joinus'),
       icon: 'tabler:rocket',
     }]}
   >
