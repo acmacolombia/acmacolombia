@@ -1,57 +1,56 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+import { getLocalizedPermalink, getLocalizedBlogPermalink, getAsset } from './utils/permalinks';
 
-// import activeLang from '~/components/common/LanguagePicker.astro'
+// import locale from '~/components/common/LanguagePicker.astro'
 
 // const currentLang = getLangFromUrl(URL);
 
-// const activeLang = getLangFromUrl(URL);
-// const activeLang = currentLang;
+// const locale = getLangFromUrl(URL);
+// const locale = currentLang;
 
 export const getNavigationData = (url) => {
-  const currentLang = getLangFromUrl(url);
-  const t = useTranslations(currentLang);
-  const activeLang = currentLang;
-  // let activeLang;
+  const locale = getLangFromUrl(url);
+  const t = useTranslations(locale);
+  // let locale;
   // if (currentLang === undefined) {
-  //   activeLang = 'es';
+  //   locale = 'es';
   //  }
   //   else {
-  //   activeLang = currentLang;
+  //   locale = currentLang;
   //   }
   // const t = useTranslations(language);
   return {headerData: {
     links: [
       {
         text: t('nav.about'),
-        href: getRelativeLocaleUrl(activeLang, '/about'),
+        href: getLocalizedPermalink(locale, '/about'),
       },
       {
         text: t('nav.news'),
-        href: getPermalink(activeLang, 'noticias', 'category'),
+        href: getLocalizedPermalink(locale, 'noticias', 'category'),
       },
       {
         text: t('nav.opportunities'),
         links: [
           {
             text: t('nav.projects'),
-            href: getPermalink(activeLang, 'proyectos', 'category'),
+            href: getLocalizedPermalink(locale, 'proyectos', 'category'),
           },
           {
             text: t('nav.events'),
-            href: getPermalink(activeLang, 'eventos', 'category'),
+            href: getLocalizedPermalink(locale, 'eventos', 'category'),
           },
           {
             text: t('nav.scholarships'),
-            href: getPermalink(activeLang, 'becas', 'category'),
+            href: getLocalizedPermalink(locale, 'becas', 'category'),
           },
         ],
       },
 
       {
         text: t('nav.blog'),
-        href: getBlogPermalink(activeLang),
+        href: getLocalizedBlogPermalink(locale),
       },
           // {
           //   text: 'Article',
@@ -77,10 +76,10 @@ export const getNavigationData = (url) => {
       // },
     {
       text: t('nav.contact'),
-      href: getRelativeLocaleUrl(activeLang, '/contact'),
+      href: getLocalizedPermalink(locale, '/contact'),
     },
     ],
-    actions: [{ text: t('nav.joinus'), href: getRelativeLocaleUrl(activeLang, '/about#joinus') }],
+    actions: [{ text: t('nav.joinus'), href: getRelativeLocaleUrl(locale, '/about#joinus') }],
   },
 
   footerData: {
@@ -90,11 +89,11 @@ export const getNavigationData = (url) => {
         title: '',
         links: [
           { text: t('nav.about'),
-          href: getRelativeLocaleUrl(activeLang, '/about') },
+          href: getLocalizedPermalink(locale, '/about') },
           { text: t('nav.blog'),
-          href: getBlogPermalink(activeLang)},
+          href: getLocalizedBlogPermalink(locale)},
           { text: t('nav.news'),
-          href: getPermalink(activeLang, 'noticias', 'category')},
+          href: getLocalizedPermalink(locale, 'noticias', 'category')},
         ],
 
       
@@ -115,16 +114,16 @@ export const getNavigationData = (url) => {
         title: '',
         links: [
           { text: t('nav.contact'),
-          href: getRelativeLocaleUrl(activeLang, '/contact')},
+          href: getLocalizedPermalink(locale, '/contact')},
           { text: t('nav.joinus'),
-          href: getRelativeLocaleUrl(activeLang, '/about#joinus') },
+          href: getLocalizedPermalink(locale, '/about#joinus') },
         ],
       
       },
     ],
     secondaryLinks: [
-      { text: t('nav.term'), href: getRelativeLocaleUrl(activeLang, '/terms') },
-      { text: t('nav.policy'), href: getRelativeLocaleUrl(activeLang, '/privacy') },
+      { text: t('nav.term'), href: getLocalizedPermalink(locale, '/terms') },
+      { text: t('nav.policy'), href: getLocalizedPermalink(locale, '/privacy') },
     ],
     socialLinks: [
       { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/acmacolombia', target: '_blank' },
