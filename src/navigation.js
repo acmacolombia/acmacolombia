@@ -1,6 +1,6 @@
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
-import { getLocalizedPermalink, getLocalizedBlogPermalink, getAsset } from './utils/permalinks';
+import { getLocalizedPermalink, getLocalizedBlogPermalink, getAsset, getPermalink } from './utils/permalinks';
 
 // import locale from '~/components/common/LanguagePicker.astro'
 
@@ -131,7 +131,7 @@ export const getNavigationData = (url) => {
       { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/acmacolombia', target: '_blank' },
       { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/acmacolombia', target: '_blank', },
       { ariaLabel: 'Youtube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/c/ACMAColombia', target: '_blank' },
-      { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml'), target: '_blank' },
+      { ariaLabel: 'RSS', icon: 'tabler:rss', href: getLocalizedPermalink(locale, '/rss.xml'), target: '_blank' },
       // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
     ],
     footNote: `${t('foot.madeby')} <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · ${t('foot.allrights')}`,
