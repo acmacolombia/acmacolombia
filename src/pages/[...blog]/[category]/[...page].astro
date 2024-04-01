@@ -19,7 +19,7 @@ const { page, category } = Astro.props;
 const currentPage = page.currentPage ?? 1;
 
 const metadata = {
-  title: `Category '${category}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `${category.replaceAll('-', ' ').replace(/^\w/, c => c.toUpperCase())} ${currentPage > 1 ? ` — ${t('blog.pag')} ${currentPage}` : ''}`,
   robots: {
     index: blogCategoryRobots?.index,
     follow: blogCategoryRobots?.follow,
