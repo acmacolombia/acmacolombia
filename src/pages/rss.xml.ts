@@ -3,6 +3,7 @@ import { getRssString } from '@astrojs/rss';
 import { SITE, METADATA, APP_BLOG } from '~/utils/config';
 import { fetchPosts } from '~/utils/blog';
 import { getPermalink } from '~/utils/permalinks';
+import { defaultLang } from '~/i18n/ui';
 
 export const GET = async () => {
   if (!APP_BLOG.isEnabled) {
@@ -12,7 +13,7 @@ export const GET = async () => {
     });
   }
 
-  const posts = await fetchPosts();
+  const posts = await fetchPosts(defaultLang);
 
   const rss = await getRssString({
     title: `${SITE.name}’s Blog`,

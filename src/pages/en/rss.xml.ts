@@ -3,8 +3,22 @@ import { getRssString } from '@astrojs/rss';
 import { SITE, METADATA, APP_BLOG } from '~/utils/config';
 import { fetchPosts } from '~/utils/blog';
 import { getPermalink } from '~/utils/permalinks';
+import { defaultLang } from '~/i18n/ui';
+
+
+// i18n RSS feed
+
+export function getStaticPaths() {
+  if (!APP_BLOG.isEnabled || !I18N.isEnabled) {
+    return [];
+  }
+
+  return Object.keys(I18N.locales).map((locale) => ({ params: { locale } }));
+}
 
 export const GET = async () => {
+  const locale = 'en';
+
   if (!APP_BLOG.isEnabled) {
     return new Response(null, {
       status: 404,
@@ -12,7 +26,14 @@ export const GET = async () => {
     });
   }
 
-  const posts = await fetchPosts();
+  const posts = await fetchPosts(locale);
+
+  if (posts.length === 0) {
+    return new Response(null, {
+      status: 404,
+      statusText: 'Not Found',
+    });
+  }
 
   const rss = await getRssString({
     title: `${SITE.name}’s Blog`,
