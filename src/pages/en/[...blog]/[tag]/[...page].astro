@@ -19,7 +19,7 @@ const { page, tag } = Astro.props;
 const currentPage = page.currentPage ?? 1;
 
 const metadata = {
-  title: `Posts by tag '${tag}'${currentPage > 1 ? ` — Page ${currentPage} ` : ''}`,
+  title: `${tag.replaceAll('-', ' ').replace(/^\w/, c => c.toUpperCase())} ${currentPage > 1 ? ` — ${t('blog.pag')} ${currentPage} ` : ''}`,
   robots: {
     index: blogTagRobots?.index,
     follow: blogTagRobots?.follow,
