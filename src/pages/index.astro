@@ -18,10 +18,12 @@ import Brands from '~/components/widgets/Brands.astro';
 
 import { getLocalizedPermalink } from '~/utils/permalinks';
 
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+const locale = getLangFromUrl(Astro.url);
+const t = useTranslations(locale);
 
 const metadata = {
-  title: 'ACMA: Asociación Colombiana de Mujeres en Aeroespacial',
-  ignoreTitleTemplate: true,
+  title: t('acma'),
 };
 ---
 

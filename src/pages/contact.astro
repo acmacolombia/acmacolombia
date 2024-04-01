@@ -3,10 +3,13 @@ import Layout from '~/layouts/PageLayout.astro';
 // import HeroText from '~/components/widgets/HeroText.astro';
 // import ContactUs from '~/components/widgets/Contact.astro';
 import Features4 from '~/components/widgets/Features4.astro';
-// import { getPermalink } from '~/utils/permalinks';
+
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+const locale = getLangFromUrl(Astro.url);
+const t = useTranslations(locale);
 
 const metadata = {
-  title: 'Contacto',
+  title: t('nav.contact'),
 };
 ---
 

@@ -1,16 +1,19 @@
 ---
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Hero from '~/components/widgets/Hero.astro';
+// import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Content from '~/components/widgets/Content.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import Team from '~/components/widgets/Team.astro';
+// import Team from '~/components/widgets/Team.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+const locale = getLangFromUrl(Astro.url);
+const t = useTranslations(locale);
 
 const metadata = {
-  title: 'Sobre ACMA',
+  title: t('nav.about'),
 };
 ---
 

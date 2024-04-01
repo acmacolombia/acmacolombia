@@ -7,6 +7,7 @@
 
   export const ui = {
     es: {
+      'acma': 'ACMA: Asociación Colombiana de Mujeres en Aeroespacial',
       'nav.about': 'Sobre ACMA',
       'nav.contact': 'Contacto',
       'nav.news': 'Noticias',
@@ -32,6 +33,7 @@
       'blog.viewAll': 'Ver todos los artículos',
     },
     en: {
+      'acma': 'ACMA: Colombian Association of Women in Aerospace',
       'nav.about': 'About ACMA',
       'nav.contact': 'Contact',
       'nav.news': 'News',
