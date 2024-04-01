@@ -5,9 +5,9 @@ author: ACMA
 excerpt: Talks
 
 image: '~/assets/images/AAA.jpeg'
-category: eventos
+category: events
 tags:
-  - eventos
+  - events
 metadata:
   canonical: https://acma.space/en/talks
 ---

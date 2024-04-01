@@ -28,22 +28,22 @@ export const getNavigationData = (url) => {
       },
       {
         text: t('nav.news'),
-        href: getLocalizedPermalink(locale, 'noticias', 'category'),
+        href: getLocalizedPermalink(locale, t('category.news'), 'category'),
       },
       {
         text: t('nav.opportunities'),
         links: [
           {
             text: t('nav.projects'),
-            href: getLocalizedPermalink(locale, 'proyectos', 'category'),
+            href: getLocalizedPermalink(locale, t('category.projects'), 'category'),
           },
           {
             text: t('nav.events'),
-            href: getLocalizedPermalink(locale, 'eventos', 'category'),
+            href: getLocalizedPermalink(locale, t('category.events'), 'category'),
           },
           {
             text: t('nav.scholarships'),
-            href: getLocalizedPermalink(locale, 'becas', 'category'),
+            href: getLocalizedPermalink(locale, t('category.scholarships'), 'category'),
           },
         ],
       },
@@ -93,7 +93,7 @@ export const getNavigationData = (url) => {
           { text: t('nav.blog'),
           href: getLocalizedBlogPermalink(locale)},
           { text: t('nav.news'),
-          href: getLocalizedPermalink(locale, 'noticias', 'category')},
+          href: getLocalizedPermalink(locale, t('category.news'), 'category')},
         ],
 
       

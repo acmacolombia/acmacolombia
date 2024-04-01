@@ -5,7 +5,7 @@ author: ACMA
 excerpt: New
 
 image: '~/assets/images/AAA.jpeg'
-category: noticias
+category: news
 tags:
   - news
 metadata:

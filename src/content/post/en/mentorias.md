@@ -5,7 +5,7 @@ author: ACMA
 excerpt: Mentorships
 
 image: '~/assets/images/AAA.jpeg'
-category: proyectos
+category: projects
 tags:
   - projects
   - opportunities

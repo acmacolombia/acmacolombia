@@ -31,6 +31,11 @@
       'foot.madeby': 'Hecho por ACMA con ❤️ y',
       'foot.allrights': 'Todos los derechos reservados',
       'blog.viewAll': 'Ver todos los artículos',
+      'category.news': 'noticias',
+      'category.opportunities': 'oportunidades',	
+      'category.scholarships': 'becas',
+      'category.projects': 'proyectos',
+      'category.events': 'eventos',
     },
     en: {
       'acma': 'ACMA: Colombian Association of Women in Aerospace',
@@ -57,6 +62,11 @@
       'foot.madeby': 'Made by ACMA with ❤️ and',
       'foot.allrights': 'All rights reserved',
       'blog.viewAll': 'View all posts',	
+      'category.news': 'news',
+      'category.opportunities': 'opportunities',
+      'category.scholarships': 'scholarships',
+      'category.projects': 'projects',
+      'category.events': 'events',
 
     },
   } as const;

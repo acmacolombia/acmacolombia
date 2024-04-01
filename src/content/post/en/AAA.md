@@ -5,7 +5,7 @@ author: ACMA
 excerpt: Three women receive the experience of flying an aircraft at the Aviation Academy Academia Antioqueña de Aviación.
 
 image: '~/assets/images/AAA.jpeg'
-category: becas 
+category: scholarships 
 tags:
   - scholarships
   - opportunities
