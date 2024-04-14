@@ -7,6 +7,8 @@ import Content from '~/components/widgets/Content.astro';
 import Layout from '~/layouts/PageLayout.astro';
 // import Team from '~/components/widgets/Team.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
+// import Testimonials2 from '~/components/widgets/Testimonials2.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
 
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
 const locale = getLangFromUrl(Astro.url);
@@ -612,4 +614,71 @@ items={[
       },
     ]}  
   />
+
+  <!-- FAQ -->
+  <FAQs
+  title="Preguntas Frecuentes"
+    items={[
+      {
+        title: '¿Qué es ACMA?',
+        description:
+          'La Asociación Colombiana de Mujeres en Aeroespacial es una entidad sin ánimo de lucro que promueve la participación, el desarrollo y el liderazgo de las mujeres en el campo aeroespacial.',
+      },
+      {
+        title: '¿Cómo puedo unirme a ACMA?',
+        description:
+            'Puedes unirte a ACMA como miembro, voluntario o patrocinador. Visita nuestra sección <a href="#joinus" class="text-accent dark:text-primary">Sé parte de nuestra constelación</a> para obtener más información.',
+      },
+      {
+        title: '¿Quiénes conforman nuestra constelación ACMA?', 
+        description:
+          'La constelación de ACMA es una red de apoyo conformada por mujeres y hombres en diversas áreas y de todos los niveles académicos y profesionales, comprometidos con la promoción de la participación y el liderazgo de las mujeres en el sector aeroespacial.',
+      },
+      {
+        title: '¿Soy hombre, puedo unirme a ACMA?',
+        description:
+          '¡Por supuesto! ACMA es una asociación inclusiva que valora y aprecia la colaboración de hombres comprometidos con la misión de promover la participación y el liderazgo de las mujeres en el sector aeroespacial.',
+      },
+      {
+        title: '¿Qué actividades realiza ACMA?',
+        description:
+          'ACMA realiza una variedad de actividades, como charlas, conferencias, mentorías, ferias universitarias, concursos, hackathons, proyectos de investigación y becas. ¿Quieres hacer una actividad en tu colegio, empresa o universidad? ¡Contáctanos!',
+      },
+      {
+        title: '¿Qué beneficios obtengo al unirme a ACMA?',
+        description:
+          'Al unirte a ACMA, tendrás acceso a gran cantidad de oportunidades, recursos, eventos y programas que fomentan tu crecimiento personal y profesional. Además, formarás parte de una constelación de apoyo que te ayudará a alcanzar tus metas en el sector aeroespacial.',
+      },
+      {
+        title: '¿Cómo puedo donar a ACMA?',
+        description:
+          'Puedes donar a ACMA en efectivo, especie o servicios, contactándonos a través de nuestro correo electrónico o redes sociales. Tu donación nos ayudará a promover la participación y empoderamiento de las mujeres en el sector aeroespacial. Podrás tener tu logo en nuestra página web y redes sociales como patrocinador oficial de ACMA. ¡Gracias por tu apoyo!',
+      },
+      {
+        title: '¿Cómo puedo colaborar con ACMA?',
+        description:
+          'Puedes colaborar con ACMA como voluntario en nuestras iniciativas y eventos. También puedes apoyarnos como patrocinador de nuestra asociación y nuestros programas. ¡Juntos, podemos promover la participación y empoderamiento de las mujeres en el sector aeroespacial!',
+      },
+      {
+        title: '¿Cómo puedo contactar a ACMA?',
+        description:
+          'Puedes contactar a ACMA a través de nuestro correo electrónico o redes sociales. Visita nuestra sección <a class="text-accent dark:text-primary" href="/contact">"Contáctanos"</a> para obtener más información.',
+      },
+      {
+        title: '¿Cómo puedo ser parte de la Junta Directiva de ACMA?',
+        description:
+          'Si estás interesada en formar parte de la Junta Directiva de ACMA, puedes postularte como candidata en nuestras elecciones. ¡Tu liderazgo y compromiso son fundamentales para el crecimiento y éxito de nuestra asociación!',
+      },
+      {
+        title: '¿Cómo puedo ser parte de un proyecto o evento de ACMA?',
+        description:
+          'Si estás interesado en ser parte de un proyecto o evento de ACMA, puedes unirte como voluntario en nuestras iniciativas. Te daremos un certificado de participación y la oportunidad de adquirir contactos, experiencia y conocimientos valiosos en el sector aeroespacial.',
+      },
+      {
+        title: '¿Cómo puedo obtener una beca de ACMA?',
+        description:
+          'Puedes obtener una beca de ACMA participando en nuestras convocatorias. Las becas se otorgan a mujeres que demuestran excelencia académica, liderazgo y compromiso con el sector aeroespacial. ¡No dudes en postularte y brillar con ACMA!',
+      },
+  ]}
+  </FAQs>
 </Layout>
