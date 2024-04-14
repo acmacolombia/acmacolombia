@@ -9,6 +9,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+import FAQs from '~/components/widgets/FAQs.astro';
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
 
@@ -157,4 +158,71 @@ items={[
       },
     ]}  
   />
+
+  <!-- FAQ -->
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'What is ACMA?',
+        description:
+          'The Colombian Association of Women in Aerospace is a non-profit entity that promotes the participation, development and leadership of women in the aerospace field.',
+      }, 
+      {
+        title: 'How can I join ACMA?',
+        description:
+          'You can join ACMA as a member, volunteer or sponsor. Visit our section <a href="#joinus" class="text-accent dark:text-primary">Become a part of our constellation</a> for more information.',
+      },
+      {
+        title: "Who is ACMA's Constellation?",
+        description:
+          'The ACMA constellation is a support network made up of women and men in various areas and at all academic and professional levels, committed to promoting the participation and leadership of women in the aerospace sector.',
+      },
+      {
+        title: "I'm a man, can I join ACMA?",
+        description:
+          'Of course! ACMA is an inclusive association that values and appreciates the collaboration of men committed to promoting the participation and leadership of women in the aerospace sector.',
+      }, 
+      {
+        title: 'What activities does ACMA carry out?',
+        description:
+          'ACMA carries out a variety of activities, such as talks, conferences, mentorships, university fairs, competitions, hackathons, research projects and scholarships. Do you want to do an activity in your school, company or university? Contact us!',
+      },
+      {
+        title: 'What benefits do I get by joining ACMA?',
+        description:
+          'By joining ACMA, you will have access to many opportunities, resources, events and programs that promote your personal and professional growth. You will also be part of a support constellation that will help you achieve your goals in the aerospace sector.',
+      },
+      {
+        title: 'How can I donate to ACMA?',
+        description:
+          'You can donate to ACMA in cash, kind or services, by contacting us through our email or social networks. Your donation will help us promote the participation and empowerment of women in the aerospace sector. You will be able to have your logo on our website and social networks as an official sponsor of ACMA. Thank you for your support!',
+      },
+      {
+        title: 'How can I collaborate with ACMA?',
+        description:
+          'You can collaborate with ACMA as a volunteer in our initiatives and events. You can also support us as a sponsor of our association and our programs. Together, we can promote the participation and empowerment of women in the aerospace sector!',
+      },
+      {
+        title: 'How can I contact ACMA?',
+        description:
+          'You can contact ACMA through our email or social networks. Visit our <a class="text-accent dark:text-primary" href="/en/contact">"Contact us"</a> section for more information.',
+      },
+      {
+        title: 'How can I be part of ACMA’s Board of Directors?',
+        description:
+          'If you are interested in being part of ACMA’s Board of Directors, you can apply as a candidate in our elections. Your leadership and commitment are essential for the growth and success of our association!',
+      },
+      {
+        title: 'How can I be part of an ACMA project or event?',
+        description:
+          'If you are interested in being part of an ACMA project or event, you can join as a volunteer in our initiatives. We will give you a certificate of participation and the opportunity to acquire valuable contacts, experience and knowledge in the aerospace sector.',
+      },
+      {
+        title: 'How can I get a scholarship from ACMA?',
+        description:
+          'You can get a scholarship from ACMA by participating in our calls for applications. Scholarships are awarded to women who demonstrate academic excellence, leadership and commitment to the aerospace sector. Do not hesitate to apply and shine with ACMA!',
+      }, 
+  ]}
+  </FAQs>
 </Layout>
