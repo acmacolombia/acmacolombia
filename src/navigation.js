@@ -134,7 +134,7 @@ export const getNavigationData = (url) => {
       { ariaLabel: 'RSS', icon: 'tabler:rss', href: getLocalizedPermalink(locale, '/rss.xml'), target: '_blank' },
       // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
     ],
-    footNote: `${t('foot.madeby')} <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · ${t('foot.allrights')}`,
+    footNote: `${t('foot.madeby')} <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/" target="_blank" > onWidget</a> · ${t('foot.allrights')}`,
     },
   }
 }
