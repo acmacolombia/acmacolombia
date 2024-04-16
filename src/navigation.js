@@ -27,6 +27,10 @@ export const getNavigationData = (url) => {
         href: getLocalizedPermalink(locale, '/about'),
       },
       {
+        text: t('nav.history_'),
+        href: getLocalizedPermalink(locale, '/history'),
+      },
+      {
         text: t('nav.news'),
         href: getLocalizedPermalink(locale, t('category.news'), 'category'),
       },
@@ -90,13 +94,13 @@ export const getNavigationData = (url) => {
         links: [
           { text: t('nav.about'),
           href: getLocalizedPermalink(locale, '/about') },
+          { text: t('nav.history_'),
+          href: getLocalizedPermalink(locale, '/history') },
           { text: t('nav.blog'),
           href: getLocalizedBlogPermalink(locale)},
           { text: t('nav.news'),
           href: getLocalizedPermalink(locale, t('category.news'), 'category')},
         ],
-
-      
       },
       {
         title: '',
