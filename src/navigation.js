@@ -98,8 +98,6 @@ export const getNavigationData = (url) => {
           href: getLocalizedPermalink(locale, '/history') },
           { text: t('nav.blog'),
           href: getLocalizedBlogPermalink(locale)},
-          { text: t('nav.news'),
-          href: getLocalizedPermalink(locale, t('category.news'), 'category')},
         ],
       },
       {
@@ -117,6 +115,8 @@ export const getNavigationData = (url) => {
       {
         title: '',
         links: [
+          { text: t('nav.news'),
+          href: getLocalizedPermalink(locale, t('category.news'), 'category')},
           { text: t('nav.contact'),
           href: getLocalizedPermalink(locale, '/contact')},
           { text: t('nav.joinus'),
