@@ -2,7 +2,7 @@
 publishDate: 2024-03-17T00:00:00Z
 title: 'Ciclo de Conferencias: Talentos aeroespaciales'
 author: ACMA
-excerpt: 'La Asociación Colombiana de Mujeres en Aeroespacial, en colaboración con el Comando Aéreo de Combate No. 5 (CACOM 5) de la Fuerza Aérea, presentó su primer Ciclo de Conferencias: Talentos Aeroespaciales. Esta iniciativa, transmitida a través de YouTube, se llevo a cabo para visibilizar, inspirar, educar y conectar a profesionales, estudiantes e interesados en el sector aeroespacial.'
+excerpt: 'La Asociación Colombiana de Mujeres en Aeroespacial, en colaboración con el Comando Aéreo de Combate No. 5 (CACOM 5) de la Fuerza Aérea, presentó su primer Ciclo de Conferencias: Talentos Aeroespaciales. '
 
 image: '~/assets/images/charla Sara Rengifo2.jpeg'
 category: eventos
@@ -12,7 +12,7 @@ metadata:
   canonical: https://acma.space/charlas
 ---
  
-Con el apoyo invaluable de CACOM 5, este ciclo de conferencias ha trazado un puente entre la experiencia militar y civil en el ámbito aeroespacial, destacando nuestro compromiso compartido con la promoción de la igualdad de oportunidades y la diversidad. A través de este esfuerzo conjunto, buscamos empoderar a la próxima generación de talentos aeroespaciales.
+Con el apoyo invaluable de CACOM 5, este ciclo de conferencias ha trazado un puente entre la experiencia militar y civil en el ámbito aeroespacial, destacando nuestro compromiso compartido con la promoción de la igualdad de oportunidades y la diversidad. Esta iniciativa, transmitida a través de YouTube, se llevo a cabo para visibilizar, inspirar, educar y conectar a profesionales, estudiantes e interesados en el sector aeroespacial.
 
 [Ver Ciclo de Conferencias: Talentos Aeroespaciales en YouTube](https://www.youtube.com/playlist?list=PLLxwS3HwlEI5Ux_4IywJ64Wtk7CZUzJMe)
 

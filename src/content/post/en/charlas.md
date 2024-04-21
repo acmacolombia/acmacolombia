@@ -2,7 +2,7 @@
 publishDate: 2024-03-17T00:00:00Z
 title: 'Conference Series: Aerospace Talents'
 author: ACMA
-excerpt: 'The Colombian Association of Women in Aerospace, in collaboration with the Air Combat Command No. 5 (CACOM 5) of the Colombian Air Force, presented its first Conference Series: Aerospace Talents. This initiative, broadcast through YouTube, was carried out to make visible, inspire, educate, and connect professionals, students, and those interested in the aerospace sector.'
+excerpt: 'The Colombian Association of Women in Aerospace, in collaboration with the Air Combat Command No. 5 (CACOM 5) of the Colombian Air Force, presented its first Conference Series: Aerospace Talents.'
 
 image: '~/assets/images/charla Sara Rengifo2.jpeg'
 category: events
@@ -12,7 +12,7 @@ metadata:
   canonical: https://acma.space/en/talks
 ---
 
-With the invaluable support of CACOM 5, this conference series has bridged the gap between military and civilian experience in the aerospace field, underscoring our shared commitment to promoting equality of opportunity and diversity. Through this collaborative effort, we seek to empower the next generation of aerospace talents.
+With the invaluable support of CACOM 5, this conference series has bridged the gap between military and civilian experience in the aerospace field, underscoring our shared commitment to promoting equality of opportunity and diversity. This initiative, broadcast through YouTube, was carried out to make visible, inspire, educate, and connect professionals, students, and those interested in the aerospace sector.
 
 [View the Conference Series: Aerospace Talents on YouTube. Please note that all videos in the "Conference Series: Aerospace Talents" are in Spanish.](https://www.youtube.com/playlist?list=PLLxwS3HwlEI5Ux_4IywJ64Wtk7CZUzJMe)
 
