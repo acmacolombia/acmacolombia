@@ -1,50 +1,81 @@
 ---
-import '~/components/widgets/team.css';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Person from '~/components/ui/Person.astro';
+import ItemGrid2 from '~/components/ui/ItemGrid2.astro';
+import type { Features } from "~/types";
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+const locale = getLangFromUrl(Astro.url);
+const t = useTranslations(locale);
+
+const metadata = {
+  title: t('nav.team'),
+};
+
+const {
+  title = await Astro.slots.render("title"),
+  subtitle = await Astro.slots.render("subtitle"),
+  tagline = await Astro.slots.render("tagline"),
+  items = [],
+  columns = 3,
+  defaultIcon,
+  image,
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render("bg"),
+} = Astro.props as Features;
 ---
 
-<div class="team-section">
-    <h2>Our Team</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-    <div class="team-members">
-      <div class="team-member">
-        <img src="https://picsum.photos/700/400?random" alt="Jhone Bi">
-        <h3>Jhone Bi</h3>
-        <p>Application Manager</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="team-member">
-        <img src="https://picsum.photos/700/400?random" alt="Sani Awesome">
-        <h3>Sani Awesome</h3>
-        <p>Social Media</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="team-member">
-        <img src="https://picsum.photos/700/400?random"  alt="Andrio Willi">
-        <h3>Andrio Willi</h3>
-        <p>Content Writer</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="team-member">
-        <img src="https://picsum.photos/700/400?random" alt="Afa Jonson">
-        <h3>Afa Jonson</h3>
-        <p>Business Manager</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
+
+<WidgetWrapper
+  id={id}
+  isDark={isDark}
+  containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`}
+  bg={bg}
+>
+  <Headline
+    title={title}
+    subtitle={subtitle}
+    tagline={tagline}
+    classes={classes?.headline}
+  />
+  <Person 
+      items={items}
+      columns={columns}
+      defaultIcon={defaultIcon}
+
+      classes={{
+        container: "gap-4 md:gap-6",
+        panel:
+            'rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-white dark:bg-slate-900 p-6',
+      // panel:
+      //   "text-center bg-page items-center md:text-left rtl:md:text-right md:items-start p-6 p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-800",
+      image: "w-12 h-12 mb-6 text-primary",
+      ...((classes?.items as {}) ?? {}),
+      
+    }}
+      
+    />
+</WidgetWrapper>
+<!-- 
+    <HeroText tagline={tagline} title={title} />
+    <article class="mb-2 transition text-center">
+    <p></p> 
+    </article>
+    <ItemGrid2 columns={columns} items={items} defaultIcon={defaultIcon} />
+    <Person
+    photoPath = "~/assets/images/AAA.jpeg"
+    socialLinks = {[
+      {
+          text: "LinkedIn",
+          href: "https://www.linkedin.com/in/boominathan-s-l-bsides-chennai-l-ex-ey-l-ex-wipro-37206632/",
+          ariaLabel: "string",
+          icon: "tabler:brand-linkedin"
+      },
+    ]},
+    name = 'Maria Alejandra Botero Botero',
+    title = 'Presidenta',
+  /> -->

@@ -1,0 +1,190 @@
+---
+import { Icon } from "astro-icon/components";
+import { twMerge } from "tailwind-merge";
+import type { ItemGrid } from "~/types";
+import Button from "./Button.astro";
+import Image from "~/components/common/Image.astro";
+
+const {
+  items = [],
+  columns,
+  defaultIcon = "/images/ACMA.png",
+  classes = {},
+} = Astro.props as ItemGrid;
+
+const {
+  container: containerClass = "sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+  panel: panelClass = "",
+  name: titleClass = "",
+  job: descriptionClass = "",
+} = classes;
+---
+
+{
+  items && (
+    <div
+      class={twMerge(
+        `grid gap-8 gap-x-12 sm:gap-y-8 ${
+          columns === 4
+            ? "lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2"
+            : columns === 3
+            ? "lg:grid-cols-3 sm:grid-cols-2"
+            : columns === 2
+            ? "sm:grid-cols-2 "
+            : ""
+        }`,
+        containerClass
+      )}
+    >
+      {items.map(
+        ({
+          name,
+          job,
+          src,
+          socialLinks,
+          callToAction,
+          classes: itemClasses = {},
+        }) => (
+          <div
+            class={twMerge(
+              "relative flex flex-col",
+              panelClass,
+              itemClasses?.panel
+            )}
+          >
+            {(src || defaultIcon) && (
+              <Image
+                src={src}
+                class="md:mx-auto rounded mx-auto mb-5"
+                widths={[50, 100]}
+                width={200}
+                sizes="(max-width: 50px) 50px, 50px"
+                alt={name}
+                aspectRatio="1:1"
+                layout="fixed"
+                loading="lazy"
+                decoding="async"
+             />
+            )}
+            <center>
+            <div
+              class={twMerge(
+                "text-xl font-bold",
+                titleClass,
+                itemClasses?.title
+              )}
+            >
+              {name}
+            </div>
+            {job && (
+              <p
+                class={twMerge(
+                  "text-muted mt-2",
+                  descriptionClass,
+                  itemClasses?.description
+                )}
+                set:html={job}
+              />
+            )}
+            {
+              socialLinks?.length ? (
+                <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4 justify-center">
+                {socialLinks.map(({ ariaLabel, href, icon }) => (
+                    <li>
+                    <a target="_blank"
+                        class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                        aria-label={ariaLabel}
+                        href={href}
+                    >
+                        {icon && <Icon name={icon} class="w-7 h-7" />}
+                    </a>
+                    </li>
+                ))}
+                </ul>
+                ) : ('')
+            }
+            {callToAction && (
+              <div class="mt-2">
+                <Button {...callToAction} />
+              </div>
+            )}            
+          </div>
+          </center>
+        )
+        
+      )}
+    </div>
+  )
+}
+
+
+
+<!-- ---
+import { Icon } from 'astro-icon/components';
+import { twMerge } from "tailwind-merge";
+import Image from '~/components/common/Image.astro';
+interface Link {
+    text?: string;
+    href?: string;
+    ariaLabel?: string;
+    icon?: string;
+}
+export interface Props {
+    photoPath?: string;
+    socialLinks: Array<Link>;
+    name?: string;
+    title?: string;
+}
+const { socialLinks = [], name = '', title = '', photoPath = '' } = Astro.props;
+---
+
+    <div class="flex flex-col lg:max-w-3xl text-center mx-auto" style="width: 20rem">
+        <Image
+            src={photoPath}
+            class="md:mx-auto rounded mx-auto mb-5"
+            widths={[50, 100]}
+            width={200}
+            sizes="(max-width: 50px) 50px, 50px"
+            alt={name}
+            aspectRatio="1:1"
+            layout="fixed"
+            loading="lazy"
+            decoding="async"
+          />
+        <div
+        class={twMerge("mb-8 md:mx-auto md:mb-12 mx-8", "max-w-l")}
+        style="width: 90%"
+        >
+            <h2
+            class={twMerge(
+                "font-bold leading-tighter tracking-tighter font-heading text-heading text-3xl",
+                "text-3xl md:text-4xl "
+            )}
+            set:html={name}
+            />
+
+            <p
+            class={twMerge("mt-3 text-muted", "text-lg")}
+            set:html={title}
+            />
+
+            <div class="md:flex md:justify-center py-6 md:pl-8"></div>
+                {
+                socialLinks?.length ? (
+                    <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
+                    {socialLinks.map(({ ariaLabel, href, text, icon }) => (
+                        <li>
+                        <a target="_blank"
+                            class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                            aria-label={ariaLabel}
+                            href={href}
+                        >
+                            {icon && <Icon name={icon} class="w-7 h-7" />}
+                        </a>
+                        </li>
+                    ))}
+                    </ul>
+                    ) : ('')}
+            </div>
+        </div>
+    </div> -->
