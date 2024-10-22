@@ -5,8 +5,8 @@ author: Dani Barajas Moreno
 excerpt: Hola!, me llamo Dani Barajas Moreno. Soy de Bogotá, Colombia, y actualmente estudio ingeniería aeroespacial en el Florida Institute of Technology. Desde hace aproximadamente un año, soy miembro activa de la Asociación Colombiana de Mujeres en la Aviación (ACMA), una experiencia que ha sido profundamente transformadora para mí.
 
 
-image: '~/assets/images/DaniBarajas.jpeg'
-category: noticias
+image: '~/assets/images/AAA.jpeg'
+category: blog
 tags:
   - mujeres
   - historias
