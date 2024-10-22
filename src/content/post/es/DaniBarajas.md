@@ -6,7 +6,7 @@ excerpt: Hola!, me llamo Dani Barajas Moreno. Soy de Bogotá, Colombia, y actual
 
 
 image: '~/assets/images/DaniBarajas.jpeg'
-category: blog
+category: noticias
 tags:
   - mujeres
   - historias
