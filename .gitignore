@@ -22,3 +22,7 @@ pnpm-debug.log*
 pnpm-lock.yaml
 
 .astro
+
+.history
+# Local Netlify folder
+.netlify
