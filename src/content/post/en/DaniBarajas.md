@@ -2,55 +2,42 @@
 publishDate: 2024-05-17T00:00:00Z
 title: 'Dani Barajas Moreno'
 author: Dani Barajas Moreno
-excerpt: 'Hola!, me llamo Dani Barajas Moreno. Soy de Bogotá, Colombia, y actualmente estudio ingeniería aeroespacial en el Florida Institute of Technology. Desde hace aproximadamente un año, soy miembro activa de la Asociación Colombiana de Mujeres en Aeroespacial (ACMA), una experiencia que ha sido profundamente transformadora para mí.'
+excerpt: 'Hello, my name is Dani Barajas Moreno. I am from Bogota, Colombia, and I am currently studying aerospace engineering at the Florida Institute of Technology. For about a year now, I have been an active member of the Colombian Association of Women in Aerospace (ACMA), an experience that has been deeply transforming for me.'
 
 image: '~/assets/images/blog/DaniBarajas.jpeg'
 category: blog
 tags:
-  - mujeres
-  - historias
-  - inspiración
+  - women
+  - stories
+  - inspiration
 metadata:
   canonical: https://acma.space/DaniBarajas
 ---
 
 ##
 
-Hace poco, tuve la increíble oportunidad de ganar la beca de experiencia de vuelo de ACMA, lo que me permitió pilotear un avión por primera vez. La sensación de controlar la aeronave en el aire fue simplemente asombrosa y me llenó de una indescriptible emoción. Esa experiencia despertó en mí el deseo de seguir adelante y obtener mi licencia de piloto privado, un sueño que ahora estoy decidida a alcanzar.
+Recently, I had the incredible opportunity to win the ACMA Flight Experience Scholarship, which allowed me to fly an airplane for the first time. The feeling of controlling the aircraft in the air was simply amazing and filled me with an indescribable thrill. That experience awakened in me the desire to go ahead and obtain my private pilot's license, a dream I am now determined to achieve.
 
-Durante el año académico 2023-2024, fui la project manager del [AIAA Panther Rocket Team](https://www.instagram.com/aiaaft.rocket.team/) en mi universidad. Este rol me permitió liderar a un grupo talentoso y comprometido, y juntos logramos un hito impresionante: el exitoso lanzamiento de nuestro cohete "Rook 2.0". Ver el cohete elevarse a una altitud de 9,258 pies en solo 23 segundos, alcanzando una velocidad de Mach 1,1, fue una experiencia electrizante. El lanzamiento no solo fue emocionante, sino que también concluyó con una recuperación segura, lo que selló nuestro éxito.
+During the 2023-2024 academic year, I was the project manager of the [AIAA Panther Rocket Team](https://www.instagram.com/aiaaft.rocket.team/) at my university. This role allowed me to lead a talented and committed group, and together we achieved an impressive milestone: the successful launch of our “Rook 2.0” rocket. Watching the rocket soar to an altitude of 9,258 feet in just 23 seconds, reaching a speed of Mach 1.1, was an electrifying experience. The launch was not only exciting, but also concluded with a safe recovery, which sealed our success.
 
+![Dani Barajas](~/assets/images/blog/DaniBarajas2.jpeg)
 
+This year as a project manager taught me a lot about leadership, teamwork and the importance of perseverance. I am excited to share that I was recently re-elected to lead the team for the 2024-2025 academic year. With my team, we are seeking sponsors for a number of ambitious projects we want to pursue. Although we have many challenges ahead of us, I am confident that it will be a year full of learning and great achievements.
 
-<p align = "center">
-<img alt="Dani Barajas" title="Dani Barajas" data-src="\src\assets\images\blog\DaniBarajas2.jpeg" class="cld-responsive" style="max-width:100%; text-align: center; padding-bottom: 16px; display: block; margin: auto; {{ $style }}">
-</p>
+![Dani Barajas](~/assets/images/blog/DaniBarajas3.jpeg)
 
+In addition to my responsibilities with the AIAA Panther Rocket Team, I am about to begin my third year of college, known as Junior year. For the past year, I have had the privilege of interning with Larsen Motorsports (LMS), one of the most prestigious jet racing exhibition teams in the world. LMS has won two world championships with the IHRA Nitro Jam series and has six elite jet racing teams that are crowd favorites.
 
-Este año como project manager me enseñó mucho sobre liderazgo, trabajo en equipo y la importancia de la perseverancia. Estoy emocionada de compartir que recientemente fui re-elegida para liderar el equipo durante el año académico 2024-2025. Con mi equipo, estamos buscando patrocinadores para una serie de proyectos ambiciosos que queremos llevar a cabo. Aunque tenemos muchos retos por delante, estoy segura de que será un año lleno de aprendizajes y grandes logros.
+![Dani Barajas](~/assets/images/blog/DaniBarajas4.jpeg)
 
-<p align = "center">
-<img alt="Dani Barajas" title="Dani Barajas" data-src="/images/blog/DaniBarajas3.jpeg" class="cld-responsive" style="max-width:100%; text-align: center; padding-bottom: 16px; display: block; margin: auto; {{ $style }}">
-</p>
+At LMS, I have worked closely with the Aerospace Technology Group, where I have been able to apply the knowledge gained in the classroom to practical situations. This experience has been invaluable to my education, providing me with crucial practical skills and bringing me one step closer to my dream of working in the aerospace industry.
 
-
-Además de mis responsabilidades con el AIAA Panther Rocket Team, estoy a punto de comenzar mi tercer año de universidad, conocido como Junior year. Durante el último año, he tenido el privilegio de realizar prácticas en Larsen Motorsports (LMS), uno de los equipos de exhibición de carreras de jets más prestigiosos del mundo. LMS ha ganado dos campeonatos mundiales con la serie IHRA Nitro Jam y cuenta con seis equipos de carreras de jets de élite que son los favoritos del público.
-
-<p align = "center">
-<img alt="Dani Barajas" title="Dani Barajas" data-src="/images/blog/DaniBarajas4.jpeg" class="cld-responsive" style="max-width:100%; text-align: center; padding-bottom: 16px; display: block; margin: auto; {{ $style }}">
-</p>
-
-En LMS, he trabajado de cerca con el Aerospace Technology Group, donde he podido aplicar el conocimiento adquirido en el aula a situaciones prácticas. Esta experiencia ha sido invaluable para mi formación, ya que me ha proporcionado habilidades prácticas cruciales y me ha acercado un paso más a mi sueño de trabajar en la industria aeroespacial.
-
-Este viaje ha sido increíble hasta ahora, y estoy emocionada por lo que el futuro tiene reservado. Estoy decidida a seguir persiguiendo mis metas y continuar aprendiendo y creciendo en este apasionante campo!
+This journey has been incredible so far, and I am excited for what the future has in store. I am determined to keep pursuing my goals and continue to learn and grow in this exciting field!
 
 
-[Conecta con Dani en Linkedin](https://www.linkedin.com/in/licethdanielabarajasmoreno/)
+[Connect with Dani on Linkedin](https://www.linkedin.com/in/licethdanielabarajasmoreno/)
 
-[Sigue a Dani en Instagram](https://www.instagram.com/danibarajasmoreno/)
-
-
-
+[Follow Dani on Instagram](https://www.instagram.com/danibarajasmoreno/)
 
 
 

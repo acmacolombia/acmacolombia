@@ -20,25 +20,17 @@ Hace poco, tuve la increíble oportunidad de ganar la beca de experiencia de vue
 
 Durante el año académico 2023-2024, fui la project manager del [AIAA Panther Rocket Team](https://www.instagram.com/aiaaft.rocket.team/) en mi universidad. Este rol me permitió liderar a un grupo talentoso y comprometido, y juntos logramos un hito impresionante: el exitoso lanzamiento de nuestro cohete "Rook 2.0". Ver el cohete elevarse a una altitud de 9,258 pies en solo 23 segundos, alcanzando una velocidad de Mach 1,1, fue una experiencia electrizante. El lanzamiento no solo fue emocionante, sino que también concluyó con una recuperación segura, lo que selló nuestro éxito.
 
-
-
-<p align = "center">
-<img alt="Dani Barajas" title="Dani Barajas" data-src="\src\assets\images\blog\DaniBarajas2.jpeg" class="cld-responsive" style="max-width:100%; text-align: center; padding-bottom: 16px; display: block; margin: auto; {{ $style }}">
-</p>
-
+![Dani Barajas](~/assets/images/blog/DaniBarajas2.jpeg)
 
 Este año como project manager me enseñó mucho sobre liderazgo, trabajo en equipo y la importancia de la perseverancia. Estoy emocionada de compartir que recientemente fui re-elegida para liderar el equipo durante el año académico 2024-2025. Con mi equipo, estamos buscando patrocinadores para una serie de proyectos ambiciosos que queremos llevar a cabo. Aunque tenemos muchos retos por delante, estoy segura de que será un año lleno de aprendizajes y grandes logros.
 
-<p align = "center">
-<img alt="Dani Barajas" title="Dani Barajas" data-src="/images/blog/DaniBarajas3.jpeg" class="cld-responsive" style="max-width:100%; text-align: center; padding-bottom: 16px; display: block; margin: auto; {{ $style }}">
-</p>
+![Dani Barajas](~/assets/images/blog/DaniBarajas3.jpeg)
 
 
 Además de mis responsabilidades con el AIAA Panther Rocket Team, estoy a punto de comenzar mi tercer año de universidad, conocido como Junior year. Durante el último año, he tenido el privilegio de realizar prácticas en Larsen Motorsports (LMS), uno de los equipos de exhibición de carreras de jets más prestigiosos del mundo. LMS ha ganado dos campeonatos mundiales con la serie IHRA Nitro Jam y cuenta con seis equipos de carreras de jets de élite que son los favoritos del público.
 
-<p align = "center">
-<img alt="Dani Barajas" title="Dani Barajas" data-src="/images/blog/DaniBarajas4.jpeg" class="cld-responsive" style="max-width:100%; text-align: center; padding-bottom: 16px; display: block; margin: auto; {{ $style }}">
-</p>
+![Dani Barajas](~/assets/images/blog/DaniBarajas4.jpeg)
+
 
 En LMS, he trabajado de cerca con el Aerospace Technology Group, donde he podido aplicar el conocimiento adquirido en el aula a situaciones prácticas. Esta experiencia ha sido invaluable para mi formación, ya que me ha proporcionado habilidades prácticas cruciales y me ha acercado un paso más a mi sueño de trabajar en la industria aeroespacial.
 
