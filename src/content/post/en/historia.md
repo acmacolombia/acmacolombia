@@ -1,57 +1,55 @@
 ---
 publishDate: 2025-03-26T00:00:00Z
-title: "Comparte tu historia y haz parte de la constelación ACMA 🚀"
+title: "Share Your Story and Join the ACMA Constellation 🚀"
 author: ACMA
-excerpt: ¿Has recorrido un camino inspirador en el mundo aeroespacial? ¿Tienes una historia que puede motivar a otras niñas y mujeres a soñar con las estrellas? ¡Queremos conocerla y compartirla en nuestro blog!
-image: '~/assets/images/blog/DaniBarajas.jpeg'
+excerpt: Have you followed an inspiring path in the aerospace world? Do you have a story that could motivate other girls and women to reach for the stars? We want to hear it and share it on our blog!
 category: blog
 tags:
-  - historias
-  - comunidad
-  - visibilidad
+  - stories
+  - community
+  - visibility
   - steam
-  - inspiración
+  - inspiration
 metadata:
   canonical: https://acma.space/blog/historia
 ---
 
-## Comparte tu historia y haz parte de la constelación ACMA 🌌
+## Share Your Story and Join the ACMA Constellation 🌌
 
-¡Hola! 👋✨  
-Nos emociona que estés aquí, porque sabemos que cada historia tiene el poder de inspirar, transformar y abrir caminos para quienes vienen detrás.
+Hello! 👋✨  
+We’re excited to have you here, because we believe every story holds the power to inspire, transform, and open doors for those who come after us.
 
-En la **Asociación Colombiana de Mujeres en Aeroespacial (ACMA)**, creemos profundamente que compartir experiencias y trayectorias es una forma poderosa de construir referentes y fortalecer nuestra constelación de mujeres y aliades en STEAM (Ciencia, Tecnología, Ingeniería, Artes y Matemáticas). 🌟🚀
+At the **Colombian Association of Women in Aerospace (ACMA)**, we firmly believe that sharing our experiences and career paths is a powerful way to build role models and strengthen our constellation of women and allies in STEAM (Science, Technology, Engineering, Arts, and Mathematics). 🌟🚀
 
-## ¿Por qué contar tu historia?
+## Why Share Your Story?
 
-Ya seas **estudiante**, **profesional**, **investigadora**, o simplemente una **entusiasta del mundo aeroespacial**, si has recorrido un camino que te enorgullece o participado en proyectos que han marcado tu vida, ¡este espacio es para ti!  
-No importa en qué etapa de tu carrera estés: lo que importa es **tu pasión por el universo, la ciencia y el cambio**. ✨
+Whether you're a **student**, **professional**, **researcher**, or simply an **aerospace enthusiast**, if you’ve followed a path you're proud of or taken part in projects that have shaped your journey — this space is for you.  
+No matter what stage of your career you're in, what matters is **your passion for space, science, and making a difference**. ✨
 
-Desde experiencias académicas, proyectos estudiantiles, descubrimientos personales, aprendizajes laborales o incluso tus sueños por cumplir, queremos que tu voz se escuche y llegue a quienes hoy están buscando referentes que se parezcan a ellas. 👩‍🚀
+From academic experiences, student projects, personal discoveries, professional growth, or even your dreams in progress — we want your voice to be heard by those who are looking for someone like them. 👩‍🚀
 
-## ¿Cómo puedes participar?
+## How Can You Participate?
 
-👉 Solo tienes que **llenar un formulario muy fácil y rápido**. Queremos conocerte, saber más sobre ti y ayudarte a contar tu historia. Luego, te contactaremos para afinar detalles de la publicación.
+👉 All you have to do is **fill out a simple and quick form**. We want to get to know you, learn more about your journey, and help you share your story. We'll contact you to fine-tune the details for publication.
 
-📝 [Accede al formulario aquí:](https://forms.gle/ixLhCjCGAcg1NE9VA)
+📝 [Access the form here.](https://forms.gle/ixLhCjCGAcg1NE9VA)
 
-Una vez publicada, tu historia aparecerá en nuestro blog oficial:  
+Once published, your story will appear on our official blog:  
 🔗 [https://acma.space/blog](https://acma.space/blog)
 
-## ¿Qué buscamos?
+## What Are We Looking For?
 
-- Experiencias reales y cercanas.  
-- Historias que conecten desde la emoción, la pasión por STEAM y el deseo de alcanzar los sueños.  
-- Voces diversas, desde Colombia y desde cualquier lugar del mundo.  
-- Mujeres y aliades comprometidos con un futuro más inclusivo.
+- Real and relatable experiences  
+- Stories filled with emotion, passion for STEAM, and the drive to reach your dreams  
+- Diverse voices, from Colombia and around the world  
+- Women and allies committed to a more inclusive future
 
-## Aviso importante
+## Important Note
 
-💡 **ACMA se reserva el derecho de publicación.** Esto quiere decir que podremos editar o seleccionar historias según nuestros lineamientos editoriales.  
-Nos comprometemos, siempre, a comunicarnos contigo y a valorar tu aporte con el respeto que merece.
+💡 **ACMA reserves the right to publish or not publish submitted stories.** This means we may edit or select stories in accordance with our editorial guidelines.  
+We are always committed to communicating with you and honoring your contribution with the respect it deserves.
 
+🌠 Every story we share is another star in our constellation.  
+**Ready to inspire others?**  
 
-🌠 Cada historia que compartimos es una estrella más en nuestra constelación.  
-**¿Lista para inspirar a otras?**  
-
-¡Cuéntanos tu historia y sigamos inspirando juntas! 🚀💜  
+Tell us your story, and let’s keep inspiring — together! 🚀💜

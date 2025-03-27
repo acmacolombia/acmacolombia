@@ -3,7 +3,6 @@ publishDate: 2025-03-26T00:00:00Z
 title: "Comparte tu historia y haz parte de la constelación ACMA 🚀"
 author: ACMA
 excerpt: ¿Has recorrido un camino inspirador en el mundo aeroespacial? ¿Tienes una historia que puede motivar a otras niñas y mujeres a soñar con las estrellas? ¡Queremos conocerla y compartirla en nuestro blog!
-image: '~/assets/images/blog/DaniBarajas.jpeg'
 category: blog
 tags:
   - historias
@@ -33,7 +32,7 @@ Desde experiencias académicas, proyectos estudiantiles, descubrimientos persona
 
 👉 Solo tienes que **llenar un formulario muy fácil y rápido**. Queremos conocerte, saber más sobre ti y ayudarte a contar tu historia. Luego, te contactaremos para afinar detalles de la publicación.
 
-📝 [Accede al formulario aquí:](https://forms.gle/ixLhCjCGAcg1NE9VA)
+📝 [Accede al formulario aquí.](https://forms.gle/ixLhCjCGAcg1NE9VA)
 
 Una vez publicada, tu historia aparecerá en nuestro blog oficial:  
 🔗 [https://acma.space/blog](https://acma.space/blog)
