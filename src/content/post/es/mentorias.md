@@ -5,7 +5,6 @@ author: ACMA
 excerpt: ¿Eres profesional y apasionada(o) por la industria aeroespacial? ¿Tienes el deseo de compartir tu conocimiento y dejar un legado inspirador? ¡Esta es tu oportunidad!
 category: proyectos
 
-image: '~/assets/images/charla Sara Rengifo2.jpeg'
 tags:
   - proyectos  
   - oportunidades  
