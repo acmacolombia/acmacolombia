@@ -3,7 +3,7 @@ publishDate: 2025-03-27T00:00:00Z
 title: "Share Your Passion — Give a Talk with ACMA! 🎤🚀"
 author: ACMA
 excerpt: Do you have a story to tell, knowledge to share, or an experience that could inspire? At ACMA, we want to hear from you! Share a talk with our community and be part of the change.
-category: community
+category: events
 tags:
   - talks
   - outreach
