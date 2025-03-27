@@ -3,6 +3,7 @@ title: "Comparte tu historia y haz parte de la constelación ACMA 🚀"
 publishDate: 2025-03-26T00:00:00Z
 author: ACMA
 excerpt: ¿Has recorrido un camino inspirador en el mundo aeroespacial? ¿Tienes una historia que puede motivar a otras niñas y mujeres a soñar con las estrellas? ¡Queremos conocerla y compartirla en nuestro blog!
+image: '~/assets/images/charla Sara Rengifo2.jpeg'
 category: comunidad
 tags:
   - historias
