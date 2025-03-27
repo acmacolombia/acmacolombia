@@ -14,8 +14,6 @@ metadata:
   canonical: https://acma.space/blog/historia
 ---
 
-## Share Your Story and Join the ACMA Constellation 🌌
-
 Hello! 👋✨  
 We’re excited to have you here, because we believe every story holds the power to inspire, transform, and open doors for those who come after us.
 
