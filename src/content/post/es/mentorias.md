@@ -6,6 +6,7 @@ excerpt: ¿Eres profesional y apasionada(o) por la industria aeroespacial? ¿Tie
 category: proyectos
 
 tags:
+  - contribute
   - proyectos  
   - oportunidades  
   - mentorías  

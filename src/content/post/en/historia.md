@@ -3,7 +3,7 @@ publishDate: 2025-03-26T00:00:00Z
 title: "Share Your Story and Join the ACMA Constellation 🚀"
 author: ACMA
 excerpt: Have you followed an inspiring path in the aerospace world? Do you have a story that could motivate other girls and women to reach for the stars? We want to hear it and share it on our blog!
-category: blog
+category: contribute
 tags:
   - stories
   - community

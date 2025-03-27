@@ -117,6 +117,8 @@ export const getNavigationData = (url) => {
         links: [
           { text: t('nav.news'),
           href: getLocalizedPermalink(locale, t('category.news'), 'category')},
+          { text: t('nav.contribute'),
+            href: getLocalizedPermalink(locale, t('category.contribute'), 'category')},
           { text: t('nav.contact'),
           href: getLocalizedPermalink(locale, '/contact')},
           { text: t('nav.joinus'),

@@ -39,6 +39,7 @@
       'category.scholarships': 'becas',
       'category.projects': 'proyectos',
       'category.events': 'eventos',
+      'category.contribute': 'súmate',
     },
     en: {
       'acma': 'ACMA: Colombian Association of Women in Aerospace',
@@ -73,6 +74,7 @@
       'category.scholarships': 'scholarships',
       'category.projects': 'projects',
       'category.events': 'events',
+      'category.contribute': 'contribute'
 
     },
   } as const;
