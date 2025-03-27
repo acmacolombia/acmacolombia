@@ -47,7 +47,7 @@ Solo requerimos una disponibilidad mínima de una hora mensual.
 
 Unirte es muy sencillo. Solo debes:
 
-* [Diligenciar este formulario de inscripción.]()
+* [Diligenciar este formulario de inscripción.](https://forms.gle/XtP9cpzLPWABVgLw6)
 
 * Adjuntar tu perfil profesional (hoja de vida, resumen de experiencia o portafolio).
 
