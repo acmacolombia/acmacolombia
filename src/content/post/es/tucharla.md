@@ -3,7 +3,7 @@ publishDate: 2025-03-27T00:00:00Z
 title: "¡Comparte tu pasión y da una charla con ACMA! 🎤🚀"
 author: ACMA
 excerpt: ¿Tienes una historia que contar, un conocimiento que compartir o una experiencia que puede inspirar? ¡En ACMA queremos escucharte! Comparte una charla con nuestra comunidad y haz parte del cambio.
-category: contribute
+category: sumate
 tags:
   - charlas
   - divulgación
