@@ -51,6 +51,10 @@ export const getNavigationData = (url) => {
           },
         ],
       },
+      {
+        text: t('nav.contribute'),
+        href: getLocalizedPermalink(locale, t('category.contribute'), 'category'),
+      },
 
       {
         text: t('nav.blog'),
