@@ -47,7 +47,6 @@ A minimum availability of **one hour per month** is required.
 Joining is easy. Just:
 
 * [Fill out this registration form.](https://forms.gle/XtP9cpzLPWABVgLw6)
-* Attach your professional profile (CV, experience summary, or portfolio).
 * That’s it! Our team will contact you to continue with the selection and matching process.
 
 Once the group of mentors is confirmed, we will open the call for mentees interested in receiving mentorship.  

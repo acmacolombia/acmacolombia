@@ -49,8 +49,6 @@ Unirte es muy sencillo. Solo debes:
 
 * [Diligenciar este formulario de inscripción.](https://forms.gle/XtP9cpzLPWABVgLw6)
 
-* Adjuntar tu perfil profesional (hoja de vida, resumen de experiencia o portafolio).
-
 * ¡Listo! Nuestro equipo se pondrá en contacto contigo para continuar con el proceso de selección y emparejamiento.
 
 
