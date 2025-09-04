@@ -4,7 +4,9 @@ title: '¡ACMA Lanza su Proyecto de Mentorías y Busca Mentoras!'
 author: ACMA
 excerpt: ¿Eres profesional y apasionada(o) por la industria aeroespacial? ¿Tienes el deseo de compartir tu conocimiento y dejar un legado inspirador? ¡Esta es tu oportunidad!
 category: proyectos
+
 tags:
+  - contribute
   - proyectos  
   - oportunidades  
   - mentorías  
@@ -46,9 +48,7 @@ Solo requerimos una disponibilidad mínima de una hora mensual.
 
 Unirte es muy sencillo. Solo debes:
 
-* [Diligenciar este formulario de inscripción.]()
-
-* Adjuntar tu perfil profesional (hoja de vida, resumen de experiencia o portafolio).
+* [Diligenciar este formulario de inscripción.](https://forms.gle/XtP9cpzLPWABVgLw6)
 
 * ¡Listo! Nuestro equipo se pondrá en contacto contigo para continuar con el proceso de selección y emparejamiento.
 

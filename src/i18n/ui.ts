@@ -19,6 +19,7 @@
       'nav.events': 'Eventos',
       'nav.scholarships': 'Becas',
       'nav.opportunities': 'Oportunidades',
+      'nav.contribute': 'Contribuye',
       'nav.joinus': 'Únete',
       'blog.back': 'Atrás',
       'blog.readingTime': 'min de lectura',
@@ -39,6 +40,7 @@
       'category.scholarships': 'becas',
       'category.projects': 'proyectos',
       'category.events': 'eventos',
+      'category.contribute': 'contribuye',
     },
     en: {
       'acma': 'ACMA: Colombian Association of Women in Aerospace',
@@ -53,6 +55,7 @@
       'nav.events': 'Events',
       'nav.scholarships': 'Scholarships',
       'nav.opportunities': 'Opportunities',
+      'nav.contribute': 'Contribute',
       'nav.joinus': 'Join us',	
       'blog.back': 'Back',	
       'blog.readingTime': 'min read',	
@@ -73,6 +76,7 @@
       'category.scholarships': 'scholarships',
       'category.projects': 'projects',
       'category.events': 'events',
+      'category.contribute': 'contribute'
 
     },
   } as const;

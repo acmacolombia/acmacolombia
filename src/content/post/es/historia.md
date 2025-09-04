@@ -1,20 +1,18 @@
 ---
-title: "Comparte tu historia y haz parte de la constelación ACMA 🚀"
 publishDate: 2025-03-26T00:00:00Z
+title: "Comparte tu historia y haz parte de la constelación ACMA 🚀"
 author: ACMA
 excerpt: ¿Has recorrido un camino inspirador en el mundo aeroespacial? ¿Tienes una historia que puede motivar a otras niñas y mujeres a soñar con las estrellas? ¡Queremos conocerla y compartirla en nuestro blog!
-category: comunidad
+category: contribuye
 tags:
   - historias
   - comunidad
   - visibilidad
-  - steaminclusivo
+  - steam
   - inspiración
 metadata:
-  canonical: https://acma.space/blog/comparte-tu-historia
+  canonical: https://acma.space/blog/historia
 ---
-
-# Comparte tu historia y haz parte de la constelación ACMA 🌌
 
 ¡Hola! 👋✨  
 Nos emociona que estés aquí, porque sabemos que cada historia tiene el poder de inspirar, transformar y abrir caminos para quienes vienen detrás.
@@ -32,7 +30,7 @@ Desde experiencias académicas, proyectos estudiantiles, descubrimientos persona
 
 👉 Solo tienes que **llenar un formulario muy fácil y rápido**. Queremos conocerte, saber más sobre ti y ayudarte a contar tu historia. Luego, te contactaremos para afinar detalles de la publicación.
 
-📝 [Accede al formulario aquí:](https://forms.gle/ixLhCjCGAcg1NE9VA)
+📝 [Accede al formulario aquí.](https://forms.gle/ixLhCjCGAcg1NE9VA)
 
 Una vez publicada, tu historia aparecerá en nuestro blog oficial:  
 🔗 [https://acma.space/blog](https://acma.space/blog)
