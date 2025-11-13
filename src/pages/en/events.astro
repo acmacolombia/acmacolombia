@@ -1,40 +1,56 @@
 ---
+import { blogTagRobots, getStaticPathsBlogTag } from '~/utils/blog';
+
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+import Headline from '~/components/blog/Headline.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Headline from '~/components/blog/Headline.astro';
+import BlogEventPosts from '~/components/widgets/BlogEventPosts.astro';
+
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
 
+const { page } = Astro.props;
+
+export async function getStaticPaths ({ paginate }) {
+  return await getStaticPathsBlogTag({ paginate });
+}
+
+
 const metadata = {
-  title: t('nav.events'),
+  title: `Eventos`,
+  robots: {
+    index: blogTagRobots?.index,
+    follow: blogTagRobots?.follow,
+  },
 };
 ---
 
 <Layout metadata={metadata}>
+  <section style="max-width:1200px;margin:0 auto;padding:1rem;">
+    <Headline><span class="capitalize">Events</span></Headline>
+    <center><p style="font-size:1.1rem;color:var(--color-muted);">Here you can check our updated calendar of events, workshops, talks, and more.</p></center>
+    <!-- Luma Calendar -->
+      <iframe 
+        src="https://luma.com/embed/calendar/cal-Rm6fnGe9eB88fab/events" 
+        width="100%" 
+        height="300" 
+        style="border: none; overflow: hidden; border-radius:6px;" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+      <p style="margin-top: 1em;text-align:center;">
+        <a href="https://luma.com/acmacolombia?k=c" target="_blank" rel="noopener noreferrer">
+          If you can't see the calendar, click here.
+        </a>
+      </p>
+  </section>
 
+  <section style="max-width:1200px;margin:0 auto;padding:1rem;">
+  <Headline><span class="capitalize" style="">Highlighted Events</span></Headline>
+  <BlogEventPosts/>
 
-<center>
-
-<section id="eventos">
-  <h1>{t('nav.events')}</h1>
-  <p>Here you can check our updated calendar of events, workshops, talks, and more.</p>
-
-  <iframe 
-    src="https://luma.com/embed/calendar/cal-Rm6fnGe9eB88fab/events" 
-    width="100%" 
-    height="800" 
-    style="border: none; overflow: hidden;" 
-    frameborder="0" 
-    allowfullscreen>
-  </iframe>
-  
-  <p style="margin-top: 1em;">
-    <a href="https://luma.com/acmacolombia?k=c" target="_blank" rel="noopener noreferrer">
-    If you can't see the calendar, click here.
-    </a>
-  </p>
-</section>
-
-
-</center>
-
+  </section>
 </Layout>
+
