@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Tags from '~/components/blog/Tags.astro';
+import { Fragment } from 'astro/jsx-runtime';
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
 
@@ -39,7 +40,6 @@ const eventPosts = allPosts
   
   <section style="max-width:1200px;margin:0 auto;padding:1rem;">
     <Fragment slot="title"> Eventos  </Fragment>
-
       <center><p style="font-size:1.1rem;color:var(--color-muted);">Consulta aquí nuestro calendario actualizado de eventos, talleres, charlas y más.</p></center>
     <!-- Luma Calendar -->
       <iframe 
@@ -64,7 +64,10 @@ const eventPosts = allPosts
     post={eventPosts}
   />
 
-  <Tags posts={eventPosts} />
+  <Tags 
+  title=''
+  tags={['eventos', 'events']}
+  />
 
   </section>  
 </Layout>
