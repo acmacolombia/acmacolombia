@@ -34,45 +34,58 @@ const eventPosts = allPosts
 
 <Layout metadata={metadata}>
   <section style="max-width:1200px;margin:0 auto;padding:1rem;">
-    <h1 style="text-align:center;">{t('nav.events')}</h1>
-    <p style="text-align:center;">Consulta aquí nuestro calendario actualizado de eventos, talleres, charlas y más.</p>
+    <div style="text-align:center;margin-bottom:3rem;">
+      <h1 style="margin-bottom:0.5rem;">{t('nav.events')}</h1>
+      <p style="font-size:1.1rem;color:var(--color-muted);">Consulta aquí nuestro calendario actualizado de eventos, talleres, charlas y más.</p>
+    </div>
 
-    <div style="display:grid;grid-template-columns: 1fr 360px; gap:1rem; align-items:start;">
-      <div style="min-width:0;">
-        <iframe 
-          src="https://luma.com/embed/calendar/cal-Rm6fnGe9eB88fab/events" 
-          width="100%" 
-          height="800" 
-          style="border: none; overflow: hidden; border-radius:6px;" 
-          frameborder="0" 
-          allowfullscreen>
-        </iframe>
-        <p style="margin-top: 1em;">
-          <a href="https://luma.com/acmacolombia?k=c" target="_blank" rel="noopener noreferrer">
-            Si no puedes ver el calendario, haz clic aquí.
-          </a>
-        </p>
-      </div>
+    <!-- Luma Calendar -->
+    <div style="max-width:900px;margin:0 auto;margin-bottom:3rem;">
+      <iframe 
+        src="https://luma.com/embed/calendar/cal-Rm6fnGe9eB88fab/events" 
+        width="100%" 
+        height="800" 
+        style="border: none; overflow: hidden; border-radius:6px;" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+      <p style="margin-top: 1em;text-align:center;">
+        <a href="https://luma.com/acmacolombia?k=c" target="_blank" rel="noopener noreferrer">
+          Si no puedes ver el calendario, haz clic aquí.
+        </a>
+      </p>
+    </div>
 
-      <aside style="background:#fff;border:1px solid #e6e6e6;padding:1rem;border-radius:6px;">
-        <h2 style="margin-top:0;">{t('nav.events')} — {locale.startsWith('es') ? 'Publicaciones' : 'Posts'}</h2>
-        {eventPosts.length === 0 ? (
-          <p>{ locale.startsWith('es') ? 'No hay publicaciones de eventos.' : 'No event posts found.' }</p>
-        ) : (
-          <ul style="list-style:none;padding:0;margin:0;">
-            {eventPosts.map(post => (
-              <li style="margin-bottom:0.75rem;">
+    <!-- Publications Section -->
+    <div style="max-width:900px;margin:0 auto;text-align:center;">
+      <h2 style="margin-bottom:2rem;">{locale.startsWith('es') ? 'Publicaciones' : 'Publications'}</h2>
+      
+      {eventPosts.length === 0 ? (
+        <p>{ locale.startsWith('es') ? 'No hay publicaciones de eventos.' : 'No event posts found.' }</p>
+      ) : (
+        <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:1.5rem;text-align:left;">
+          {eventPosts.map(post => (
+            <article style="background:#fff;border:1px solid #e6e6e6;border-radius:6px;padding:1.5rem;transition:box-shadow 0.3s;">
+              <h3 style="margin-top:0;margin-bottom:0.5rem;">
                 <a href={post.url ?? '#'} style="text-decoration:none;color:var(--color-text);">
-                  <strong>{post.title ?? post.headline ?? 'Untitled'}</strong>
+                  {post.title ?? post.headline ?? 'Untitled'}
                 </a>
-                <div style="font-size:0.85rem;color:var(--color-muted);">
-                  {post.date ? new Date(post.date).toLocaleDateString(locale) : ''}
-                </div>
-              </li>
-            ))}
-          </ul>
-        )}
-      </aside>
+              </h3>
+              <div style="font-size:0.85rem;color:var(--color-muted);margin-bottom:0.75rem;">
+                {post.date ? new Date(post.date).toLocaleDateString(locale) : ''}
+              </div>
+              {post.excerpt && (
+                <p style="font-size:0.95rem;color:var(--color-muted);margin:0.75rem 0;">
+                  {post.excerpt}
+                </p>
+              )}
+              <a href={post.url ?? '#'} style="color:var(--color-primary);text-decoration:none;font-weight:500;">
+                {locale.startsWith('es') ? 'Leer más' : 'Read more'} →
+              </a>
+            </article>
+          ))}
+        </div>
+      )}
     </div>
   </section>
 </Layout>
