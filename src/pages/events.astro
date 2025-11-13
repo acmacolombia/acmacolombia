@@ -34,10 +34,12 @@ const eventPosts = allPosts
 ---
 
 <Layout metadata={metadata}>
+
+  
   <section style="max-width:1200px;margin:0 auto;padding:1rem;">
-    <title>{t('nav.events')}</title>
-      <h1 style="margin-bottom:0.5rem;"></h1>
-      <p style="font-size:1.1rem;color:var(--color-muted);">Consulta aquí nuestro calendario actualizado de eventos, talleres, charlas y más.</p>
+    <Fragment slot="title">t('nav.events')</Fragment>
+
+      <center></center><p style="font-size:1.1rem;color:var(--color-muted);">Consulta aquí nuestro calendario actualizado de eventos, talleres, charlas y más.</p></center>
     <!-- Luma Calendar -->
       <iframe 
         src="https://luma.com/embed/calendar/cal-Rm6fnGe9eB88fab/events" 
@@ -56,41 +58,10 @@ const eventPosts = allPosts
       
   <!-- HighlightedPosts Widget ******* -->
   <BlogLatestPosts
-    title="Artículos"
+    title=t('nav.events')
     information={`                `}
+    posts={eventPosts}
   />
 
-
-    <!-- Publications Section -->
-    <div style="max-width:900px;margin:0 auto;text-align:center;">
-      <h2 style="margin-bottom:2rem;">{locale.startsWith('es') ? 'Publicaciones' : 'Publications'}</h2>
-      
-      {eventPosts.length === 0 ? (
-        <p>{ locale.startsWith('es') ? 'No hay publicaciones de eventos.' : 'No event posts found.' }</p>
-      ) : (
-        <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:1.5rem;text-align:left;">
-          {eventPosts.map(post => (
-            <article style="background:#fff;border:1px solid #e6e6e6;border-radius:6px;padding:1.5rem;transition:box-shadow 0.3s;">
-              <h3 style="margin-top:0;margin-bottom:0.5rem;">
-                <a href={post.url ?? '#'} style="text-decoration:none;color:var(--color-text);">
-                  {post.title ?? post.headline ?? 'Untitled'}
-                </a>
-              </h3>
-              <div style="font-size:0.85rem;color:var(--color-muted);margin-bottom:0.75rem;">
-                {post.date ? new Date(post.date).toLocaleDateString(locale) : ''}
-              </div>
-              {post.excerpt && (
-                <p style="font-size:0.95rem;color:var(--color-muted);margin:0.75rem 0;">
-                  {post.excerpt}
-                </p>
-              )}
-              <a href={post.url ?? '#'} style="color:var(--color-primary);text-decoration:none;font-weight:500;">
-                {locale.startsWith('es') ? 'Leer más' : 'Read more'} →
-              </a>
-            </article>
-          ))}
-        </div>
-      )}
-    </div>
-  </section>
+  </section>  
 </Layout>
