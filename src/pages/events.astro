@@ -1,61 +1,91 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { fetchPosts } from '~/utils/blog';
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
-
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
-
-// ✅ Get posts for current locale
-const posts = await fetchPosts(locale);
-
-// ✅ Filter posts by category "events"
-const eventPosts = posts.filter(post => post.category === 'events');
 
 const metadata = {
   title: t('nav.events'),
 };
+
+// ...existing code...
+
+// --- load blog posts (adjust glob path if your posts live elsewhere) ---
+// This uses Vite's import.meta.glob to eagerly load frontmatter from your markdown/mdx posts.
+// It is tolerant of `category` being a string or an array in frontmatter.
+const postsImport = import.meta.glob('/src/content/posts/**/*.md*', { eager: true });
+const allPosts = Object.values(postsImport).map((m: any) => ({
+  ...((m as any).frontmatter ?? {}),
+  url: (m as any).url ?? (m as any).file ?? undefined,
+}));
+
+const categoryLabel = locale?.startsWith('es') ? 'eventos' : 'events';
+
+function matchesCategory(post: any) {
+  if (!post) return false;
+  const cat = post.category ?? post.categories ?? [];
+  if (Array.isArray(cat)) return cat.map(c => String(c).toLowerCase()).includes(categoryLabel);
+  return String(cat).toLowerCase() === categoryLabel;
+}
+
+const eventPosts = allPosts
+  .filter(matchesCategory)
+  .sort((a, b) => {
+    // try common frontmatter fields: date, published
+    const da = new Date(a.date ?? a.published ?? 0).getTime();
+    const db = new Date(b.date ?? b.published ?? 0).getTime();
+    return db - da;
+  });
 ---
 
 <Layout metadata={metadata}>
 
-  <h1>{t('nav.events')}</h1>
+<section style="max-width:1200px;margin:0 auto;padding:1rem;">
 
-  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+  <h1 style="text-align:center;">{t('nav.events')}</h1>
+  <p style="text-align:center;">Consulta aquí nuestro calendario actualizado de eventos, talleres, charlas y más.</p>
 
-    <!-- 🗓️ Luma Calendar -->
-    <div style="flex: 1 1 60%;">
-      <h2>🌌 {t('events.subtitle') ?? 'Próximos eventos ACMA'}</h2>
+  <div style="display:grid;grid-template-columns: 1fr 360px; gap:1rem; align-items:start;">
+    <!-- left: Luma calendar (responsive) -->
+    <div style="min-width:0;">
       <iframe 
-        src="https://luma.com/embed/calendar/cal-Rm6fnGe9eB88fab/events"
+        src="https://luma.com/embed/calendar/cal-Rm6fnGe9eB88fab/events" 
         width="100%" 
         height="800" 
-        style="border: none;" 
+        style="border: none; overflow: hidden; border-radius:6px;" 
         frameborder="0" 
         allowfullscreen>
       </iframe>
+
       <p style="margin-top: 1em;">
         <a href="https://luma.com/acmacolombia?k=c" target="_blank" rel="noopener noreferrer">
-          {t('events.link') ?? 'Ver calendario completo en Luma'}
+        Si no puedes ver el calendario, haz clic aquí.
         </a>
       </p>
     </div>
 
-    <!-- 📝 List of blog posts with category "events" -->
-    <aside style="flex: 1 1 35%;">
-      <h3>{t('eventos.relatedPosts') ?? 'Artículos relacionados'}</h3>
-      <ul style="list-style: none; padding: 0; margin: 0;">
-        {eventPosts.map(post => (
-          <li style="margin-bottom: 1.5rem;">
-            <a href={`/${locale}/blog/${post.slug}`} style="text-decoration: none; font-weight: bold;">
-              {post.title}
-            </a>
-            <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">{post.excerpt}</p>
-          </li>
-        ))}
-      </ul>
-    </aside>
+    <!-- right: recent posts in "events/eventos" category -->
+    <aside style="background:#fff;border:1px solid #e6e6e6;padding:1rem;border-radius:6px;">
+      <h2 style="margin-top:0;">{t('nav.events')} — {locale.startsWith('es') ? 'Publicaciones' : 'Posts'}</h2>
 
+      {eventPosts.length === 0 ? (
+        <p>{ locale.startsWith('es') ? 'No hay publicaciones de eventos.' : 'No event posts found.' }</p>
+      ) : (
+        <ul style="list-style:none;padding:0;margin:0;">
+          {eventPosts.map(post => (
+            <li style="margin-bottom:0.75rem;">
+              <a href={post.url ?? '#'} style="text-decoration:none;color:var(--color-text);">
+                <strong>{post.title ?? post.headline ?? 'Untitled'}</strong>
+              </a>
+              <div style="font-size:0.85rem;color:var(--color-muted);">
+                {post.date ? new Date(post.date).toLocaleDateString(locale) : ''}
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </aside>
   </div>
+</section>
 
 </Layout>
