@@ -2,7 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import Features from '~/components/widgets/Features.astro';
+import Headline from '~/components/blog/Headline.astro';
 import List from '~/components/blog/List.astro';
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
@@ -33,15 +33,36 @@ const eventPosts = allPosts
     const db = new Date(b.date ?? b.published ?? 0).getTime();
     return db - da;
   });
+
+
+export async function getStaticPaths ({ paginate }) {
+  return await getStaticPathsBlogTag({ paginate });
+}
+
+const { page, tag } = Astro.props;
+
+const currentPage = page.currentPage ?? 1;
+
+const metadata = {
+  title: `${tag.replaceAll('-', ' ').replace(/^\w/, c => c.toUpperCase())} ${currentPage > 1 ? ` — ${eventos} ${currentPage} ` : ''}`,
+  robots: {
+    index: blogTagRobots?.index,
+    follow: blogTagRobots?.follow,
+  },
+};
+---
+
+
+
+
 ---
 
 <Layout metadata={metadata}>
 
   
   <section style="max-width:1200px;margin:0 auto;padding:1rem;">
-    <Features
-      title="Eventos"
-    />
+    <Headline><span class="capitalize">Eventos</span></Headline>
+
     <center><p style="font-size:1.1rem;color:var(--color-muted);">Consulta aquí nuestro calendario actualizado de eventos, talleres, charlas y más.</p></center>
     <!-- Luma Calendar -->
       <iframe 
@@ -58,15 +79,8 @@ const eventPosts = allPosts
         </a>
       </p>
 
-      
-  <!-- HighlightedPosts Widget ******* -->
-  <BlogLatestPosts
-    title="" 
-    information={`                `}
-    post={eventPosts}
-  />
-  <List 
-    posts={eventPosts}
-  />
-  </section>  
+    <BlogList posts={page.data.map(p => p.locales[locale])} />
+    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+  </section>
 </Layout>
+
