@@ -8,7 +8,7 @@ const metadata = {
   title: t('nav.events'),
 };
 
-const postsImport = import.meta.glob('/src/content/posts/**/*.md*', { eager: true });
+const postsImport = import.meta.glob('/src/content/post/**/*.md*', { eager: true });
 const allPosts = Object.values(postsImport).map((m: any) => ({
   ...((m as any).frontmatter ?? {}),
   url: (m as any).url ?? (m as any).file ?? undefined,
