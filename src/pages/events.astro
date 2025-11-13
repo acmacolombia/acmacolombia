@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Tags from '~/components/blog/Tags.astro';
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
 
@@ -37,9 +38,9 @@ const eventPosts = allPosts
 
   
   <section style="max-width:1200px;margin:0 auto;padding:1rem;">
-    <Fragment slot="title">t('nav.events')</Fragment>
+    <Fragment slot="title"> Eventos  </Fragment>
 
-      <center></center><p style="font-size:1.1rem;color:var(--color-muted);">Consulta aquí nuestro calendario actualizado de eventos, talleres, charlas y más.</p></center>
+      <center><p style="font-size:1.1rem;color:var(--color-muted);">Consulta aquí nuestro calendario actualizado de eventos, talleres, charlas y más.</p></center>
     <!-- Luma Calendar -->
       <iframe 
         src="https://luma.com/embed/calendar/cal-Rm6fnGe9eB88fab/events" 
@@ -58,10 +59,12 @@ const eventPosts = allPosts
       
   <!-- HighlightedPosts Widget ******* -->
   <BlogLatestPosts
-    title=t('nav.events')
+    title="" 
     information={`                `}
-    posts={eventPosts}
+    post={eventPosts}
   />
+
+  <Tags posts={eventPosts} />
 
   </section>  
 </Layout>
