@@ -1,39 +1,18 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Headline from '~/components/blog/Headline.astro';
-import List from '~/components/blog/List.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import BlogList from '~/components/blog/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+import Pagination from '~/components/blog/Pagination.astro';
+
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
 
 const metadata = {
   title: t('nav.events'),
 };
-
-const postsImport = import.meta.glob('/src/content/post/**/*.md*', { eager: true });
-const allPosts = Object.values(postsImport).map((m: any) => ({
-  ...((m as any).frontmatter ?? {}),
-  url: (m as any).url ?? (m as any).file ?? undefined,
-}));
-
-const categoryLabel = locale?.startsWith('es') ? 'eventos' : 'events';
-
-function matchesCategory(post: any) {
-  if (!post) return false;
-  const cat = post.category ?? post.categories ?? [];
-  if (Array.isArray(cat)) return cat.map(c => String(c).toLowerCase()).includes(categoryLabel);
-  return String(cat).toLowerCase() === categoryLabel;
-}
-
-const eventPosts = allPosts
-  .filter(matchesCategory)
-  .sort((a, b) => {
-    const da = new Date(a.date ?? a.published ?? 0).getTime();
-    const db = new Date(b.date ?? b.published ?? 0).getTime();
-    return db - da;
-  });
-
 
 export async function getStaticPaths ({ paginate }) {
   return await getStaticPathsBlogTag({ paginate });
