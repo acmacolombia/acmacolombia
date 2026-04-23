@@ -50,6 +50,7 @@ const postCollection = defineCollection({
     publishDate: z.date().optional(),
     updateDate: z.date().optional(),
     draft: z.boolean().optional(),
+    unlisted: z.boolean().optional(),
 
     title: z.string(),
     excerpt: z.string().optional(),

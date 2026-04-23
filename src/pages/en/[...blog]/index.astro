@@ -13,13 +13,14 @@ import { getLangFromUrl } from '~/i18n/utils';
 const locale = getLangFromUrl(Astro.url);
 
 export async function getStaticPaths () {
-  return await getStaticPathsBlogPost();
+  return await getStaticPathsBlogPost({ locale: 'en' });
 }
 
 const { post } = Astro.props;
 const localizedPost = post.locales[locale];
 
 const url = getCanonical(getPermalink(localizedPost.permalink, 'post'));
+const canonicalUrl = String(url);
 const image = (await findImage(localizedPost.image)) as ImageMetadata | undefined;
 
 const metadata = merge(
@@ -35,8 +36,16 @@ const metadata = merge(
       ...(image ? { images: [{ url: image, width: image?.width, height: image?.height }] } : {}),
     },
   },
-  { ...(localizedPost?.metadata ? { ...localizedPost.metadata, canonical: post.metadata?.canonical || url } : {}) }
+  { ...(localizedPost?.metadata ? { ...localizedPost.metadata, canonical: localizedPost.metadata?.canonical || canonicalUrl } : {}) }
 );
+
+if (localizedPost?.unlisted) {
+  metadata.robots = {
+    ...(metadata.robots || {}),
+    index: false,
+    follow: false,
+  };
+}
 ---
 
 <Layout metadata={metadata}>

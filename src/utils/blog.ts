@@ -54,6 +54,7 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     category: rawCategory,
     author,
     draft = false,
+    unlisted = false,
     metadata = {},
   } = data;
 
@@ -82,6 +83,7 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     author: author,
 
     draft: draft,
+  unlisted: unlisted,
 
     metadata,
 
@@ -115,6 +117,12 @@ const load = async function (): Promise<Array<Post>> {
   return results;
 };
 
+const getVisibleLocalizedPosts = (postsLocalized: Array<LocalizedPost>, locale: string) =>
+  postsLocalized.filter((post) => {
+    const localizedPost = post.locales[locale];
+    return localizedPost && !localizedPost.unlisted;
+  });
+
 let _posts: Array<Post>;
 let _postsLocalized : Array<LocalizedPost>;
 export const paginatedPostsByLang = new Map<string, Array<Post>>();
@@ -135,7 +143,7 @@ export const blogTagRobots = APP_BLOG.tag.robots;
 export const blogPostsPerPage = APP_BLOG?.postsPerPage;
 
 /** */
-export const fetchLocalizedPosts = async (): Promise<Array<LocalizedPost>> => {
+export const fetchLocalizedPosts = async ({ includeUnlisted = false, locale }: { includeUnlisted?: boolean; locale?: string } = {}): Promise<Array<LocalizedPost>> => {
   if (!_posts) {
     _posts = await load();
 
@@ -153,12 +161,18 @@ export const fetchLocalizedPosts = async (): Promise<Array<LocalizedPost>> => {
     });
   }
 
-  return _postsLocalized;
+  if (!locale) return _postsLocalized;
+
+  if (includeUnlisted) {
+    return _postsLocalized.filter((post) => Boolean(post.locales[locale]));
+  }
+
+  return getVisibleLocalizedPosts(_postsLocalized, locale);
 };
 
 /** */
-export const fetchPosts = async (locale: string): Promise<Array<Post>> => {
-  const _postsLocalized = await fetchLocalizedPosts();
+export const fetchPosts = async (locale: string, { includeUnlisted = false }: { includeUnlisted?: boolean } = {}): Promise<Array<Post>> => {
+  const _postsLocalized = await fetchLocalizedPosts({ includeUnlisted, locale });
   return _postsLocalized
     .map((post) => post.locales[locale])
     .filter((post): post is Post => post !== undefined);
@@ -201,9 +215,9 @@ export const findLatestPosts = async ({ count }: { count?: number }, locale: str
 };
 
 /** */
-export const getStaticPathsBlogList = async ({ paginate }: { paginate: PaginateFunction }) => {
+export const getStaticPathsBlogList = async ({ paginate, locale }: { paginate: PaginateFunction; locale: string }) => {
   if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
-  const _postsLocalized = await fetchLocalizedPosts();
+  const _postsLocalized = await fetchLocalizedPosts({ locale });
 
   return paginate(_postsLocalized, {
     params: { blog: BLOG_BASE || undefined },
@@ -212,9 +226,9 @@ export const getStaticPathsBlogList = async ({ paginate }: { paginate: PaginateF
 };
 
 /** */
-export const getStaticPathsBlogPost = async () => {
+export const getStaticPathsBlogPost = async ({ locale }: { locale: string }) => {
   if (!isBlogEnabled || !isBlogPostRouteEnabled) return [];
-  const _postsLocalized = await fetchLocalizedPosts();
+  const _postsLocalized = await fetchLocalizedPosts({ includeUnlisted: true, locale });
 
   return _postsLocalized.map((post) => ({
     params: {
@@ -225,15 +239,15 @@ export const getStaticPathsBlogPost = async () => {
 };
 
 /** */
-export const getStaticPathsBlogCategory = async ({ paginate }) => {
+export const getStaticPathsBlogCategory = async ({ paginate, locale }) => {
   if (!isBlogEnabled || !isBlogCategoryRouteEnabled) return [];
 
-  const _postsLocalized = await fetchLocalizedPosts();
+  const _postsLocalized = await fetchLocalizedPosts({ locale });
 
   const categoriesSet = new Set(
     _postsLocalized.flatMap(post =>
-      Object.values(post.locales)
-        .map(locale => locale?.category?.toLowerCase())  // Use optional chaining
+      [post.locales[locale]]
+        .map((localizedPost) => localizedPost?.category?.toLowerCase())
         .filter(category => typeof category === 'string')
     )
   );
@@ -241,10 +255,7 @@ export const getStaticPathsBlogCategory = async ({ paginate }) => {
   return Array.from(categoriesSet).flatMap(category =>
     paginate(
       _postsLocalized.filter(post =>
-        Object.values(post.locales).some(
-          locale =>
-            locale?.category?.toLowerCase() === category  // Use optional chaining
-        )
+        post.locales[locale]?.category?.toLowerCase() === category
       ),
       {
         params: { category, blog: CATEGORY_BASE || undefined },
@@ -256,16 +267,16 @@ export const getStaticPathsBlogCategory = async ({ paginate }) => {
 };
 
 /** */
-export const getStaticPathsBlogTag = async ({ paginate }) => {
+export const getStaticPathsBlogTag = async ({ paginate, locale }) => {
   if (!isBlogEnabled || !isBlogTagRouteEnabled) return [];
 
-  const _postsLocalized = await fetchLocalizedPosts();
+  const _postsLocalized = await fetchLocalizedPosts({ locale });
 
   const tagsSet = new Set(
     _postsLocalized.flatMap(post =>
-      Object.values(post.locales)
-        .filter(locale => locale) // Filter out undefined locales
-        .flatMap(locale => locale?.tags || []) // Use optional chaining and provide an empty array for undefined tags
+      [post.locales[locale]]
+        .filter((localizedPost) => localizedPost)
+        .flatMap((localizedPost) => localizedPost?.tags || [])
         .map(tag => tag?.toLowerCase())
         .filter(tag => typeof tag === 'string')
     )
@@ -274,12 +285,8 @@ export const getStaticPathsBlogTag = async ({ paginate }) => {
   return Array.from(tagsSet).flatMap(tag =>
     paginate(
       _postsLocalized.filter(post =>
-        Object.values(post.locales).some(
-          locale =>
-            locale &&
-            Array.isArray(locale.tags) &&
-            locale.tags.includes(tag)
-        )
+        Array.isArray(post.locales[locale]?.tags) &&
+        post.locales[locale].tags.includes(tag)
       ),
       {
         params: { tag, blog: TAG_BASE || undefined },
