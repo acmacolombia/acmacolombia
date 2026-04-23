@@ -30,10 +30,10 @@ export const getNavigationData = (url) => {
         text: t('nav.history_'),
         href: getLocalizedPermalink(locale, '/history'),
       },
-      {
-        text: t('nav.news'),
-        href: getLocalizedPermalink(locale, t('category.news'), 'category'),
-      },
+      // {
+      //   text: t('nav.news'),
+      //   href: getLocalizedPermalink(locale, t('category.news'), 'category'),
+      // },
       {
         text: t('nav.opportunities'),
         links: [
