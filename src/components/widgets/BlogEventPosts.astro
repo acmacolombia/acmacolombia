@@ -1,0 +1,76 @@
+---
+import { APP_BLOG } from "~/utils/config";
+
+import Grid from "~/components/blog/Grid.astro";
+import List from '~/components/blog/List.astro';
+
+import { getBlogPermalink } from "~/utils/permalinks";
+import { findLatestPosts } from "~/utils/blog";
+import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
+import type { Widget } from "~/types";
+
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+
+const locale = getLangFromUrl(Astro.url);
+const t = useTranslations(locale);
+
+
+export interface Props extends Widget {
+  title?: string;
+  linkText?: string;
+  linkUrl?: string | URL;
+  information?: string;
+  count?: number;
+}
+
+const {
+  title = await Astro.slots.render("title"),
+  linkText = t('blog.viewAll'),
+  linkUrl = getBlogPermalink(),
+  information = await Astro.slots.render("information"),
+  count = 1,
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render("bg"),
+} = Astro.props;
+
+// fetch latest posts (request more than `count` to allow filtering)
+const rawPosts = APP_BLOG.isEnabled ? await findLatestPosts({ count: Math.max(12, count) }, locale) : [];
+
+// determine category label by locale
+const categoryLabel = locale?.startsWith('es') ? 'eventos' : 'events';
+
+function getPostCategories(post: any) {
+  // try common locations for category metadata
+  const candidates = [
+    post.category,
+    post.categories,
+    post.tags,
+    post.data?.category,
+    post.data?.categories,
+    post.frontmatter?.category,
+    post.frontmatter?.categories,
+  ].filter(Boolean);
+
+  // normalize to array of strings
+  const flattened: string[] = [];
+  for (const c of candidates) {
+    if (Array.isArray(c)) c.forEach(x => flattened.push(String(x)));
+    else flattened.push(String(c));
+  }
+  return flattened.map(s => s.toLowerCase());
+}
+
+function matchesCategory(post: any) {
+  if (!post) return false;
+  const cats = getPostCategories(post);
+  return cats.includes(categoryLabel);
+}
+
+const posts = rawPosts.filter(matchesCategory).slice(0, count);
+---
+
+
+<List posts={posts} />

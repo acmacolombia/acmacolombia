@@ -43,7 +43,7 @@ export const getNavigationData = (url) => {
           },
           {
             text: t('nav.events'),
-            href: getLocalizedPermalink(locale, t('category.events'), 'category'),
+            href: getLocalizedPermalink(locale, '/events'),
           },
           {
             text: t('nav.scholarships'),
