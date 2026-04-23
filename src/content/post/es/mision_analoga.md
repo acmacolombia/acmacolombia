@@ -3,8 +3,7 @@ publishDate: 2026-04-24T00:00:00Z
 title: '¡ACMA y Fundación Con Cora Lanzan Propulsando Sueños: Misión Análoga 2026!'
 author: ACMA
 excerpt: ¿Sueñas con el espacio? Buscamos 8 mujeres colombianas para vivir una misión espacial análoga de dos semanas en el hábitat HAdEES-C. Convocatoria abierta del 24 de abril al 15 de mayo de 2026.
-category: proyectos
-draft: true
+category: 
 
 tags:
   - propulsando-sueños
