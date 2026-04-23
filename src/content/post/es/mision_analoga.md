@@ -18,7 +18,7 @@ metadata:
   canonical: https://acma.space/mision_analoga
 ---
 
-Propulsando Sueños es nuestra iniciativa para llevar a mujeres colombianas a vivir una experiencia espacial real sin salir de la Tierra. Una convocatoria de la Asociación Colombiana de Mujeres en Aeroespacial (ACMA) y la Fundación Con Cora para inspirar a la próxima generación de mujeres en el sector aeroespacial.
+Propulsando Sueños es nuestra iniciativa para llevar a mujeres colombianas a vivir una experiencia espacial real sin salir de la Tierra. Una convocatoria de la Fundación Con Cora y la Asociación Colombiana de Mujeres en Aeroespacial (ACMA) para inspirar a la próxima generación de mujeres en el sector aeroespacial.
 
 [Postúlate ahora →](https://forms.gle/TyXFmuJT9hmiWnGB8)
 
