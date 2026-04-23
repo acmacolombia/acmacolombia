@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-23-04T00:00:00Z
+publishDate: 2026-04-23T00:00:00Z
 title: '¡ACMA Lanza su Proyecto de Mentorías y Busca Mentoras!'
 author: ACMA
 excerpt: ¿Eres profesional y apasionada(o) por la industria aeroespacial? ¿Tienes el deseo de compartir tu conocimiento y dejar un legado inspirador? ¡Esta es tu oportunidad!
